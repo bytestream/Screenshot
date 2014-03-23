@@ -15,6 +15,12 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Misc {
 
+    /**
+     * Convert a bufferedimage object to a byte array
+     *
+     * @param image BufferedImage object stored in-memory
+     * @return The converted object as a byte array
+     */
     public static byte[] imageToByteArray(BufferedImage image) {
         byte[] res = new byte[0];
 
@@ -37,6 +43,12 @@ public class Misc {
         return res;
     }
 
+    /**
+     * Calculate the MD5 of a byte array
+     *
+     * @param inBytes Byte array
+     * @return A string representing the MD5 hash of the byte array
+     */
     public static String getMD5Hash(byte[] inBytes) {
         MessageDigest digest = null;
         try {

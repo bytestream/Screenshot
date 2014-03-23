@@ -21,6 +21,11 @@ public class Personal implements Uploader {
     private final String URL = "https://uk1.focushosting.com/upload.php";
 
     @Override
+    /**
+     * Upload the specified binary file (image) to a given web server
+     * @param file Location of the file to upload
+     * @return The URL to the uploaded file
+     */
     public String post(File binaryFile) {
         // TODO: update to use InstallCert and set the trust store based on this
         System.setProperty("javax.net.ssl.trustStore", "jssecacerts");
@@ -78,6 +83,12 @@ public class Personal implements Uploader {
         return response.getURL();
     }
 
+    /**
+     * Get the response body from a given URL connection
+     *
+     * @param connection Connection to get the input stream from
+     * @return The response body as a string
+     */
     private String getResponse(URLConnection connection) {
         String response = "";
 
@@ -94,6 +105,12 @@ public class Personal implements Uploader {
     }
 
     @Override
+    /**
+     * Open the image using the appropriate software. For example, if the
+     * image has been uploaded to imgur then this should open a web browser
+     * pointed to http://imgur.com/image.png
+     * @param location URI location (file or URL)
+     */
     public void openImage(String location) {
         try {
             Desktop.getDesktop().browse(new URI(location));

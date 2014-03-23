@@ -29,6 +29,12 @@ public class FileIO {
         return System.getProperty("java.io.tmpdir") + fileName;
     }
 
+    /**
+     * Take a screenshot of a given area on the screen
+     *
+     * @param area The area of the screen to capture
+     * @return A bufferedimage in-memory data store of the captured image
+     */
     public static BufferedImage takeScreenshot(Rectangle area) {
         try {
             return new Robot().createScreenCapture(area);
@@ -38,6 +44,12 @@ public class FileIO {
         }
     }
 
+    /**
+     * Read an image from the file system into memory
+     *
+     * @param location Location of the image on the file system
+     * @return A bufferedimage in-memory data store of the image file
+     */
     public static BufferedImage readImage(String location) {
         try {
             BufferedImage image = ImageIO.read(new File(location));
@@ -48,6 +60,14 @@ public class FileIO {
         }
     }
 
+    /**
+     * Write an image to the file system
+     *
+     * @param image    BufferedImage object of the image stored in-memory
+     * @param location Where to save the image file to on the file system
+     * @param type     The file type to save the image as (JPG, PNG, GIF, etc)
+     * @return The location of the written file
+     */
     public static String writeImage(BufferedImage image, String location, String type) {
         try {
             ImageIO.write(image, type, new File(location));
