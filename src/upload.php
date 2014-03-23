@@ -63,7 +63,7 @@ try {
 
     // Successful upload
     echo json_encode(array(
-        "URL"   => "{$_SERVER['REQUEST_URI']}/{$fileLocation}",
+        "URL"   => "http://{$_SERVER['SERVER_NAME']/{$fileLocation}",
         "size"  => get_file_size($_FILES['image']['size'])
     ));
 
