@@ -1,6 +1,7 @@
 package uk.co.miami_nice.screenshot.io;
 
 import com.intellij.util.ui.UIUtil;
+import uk.co.miami_nice.screenshot.misc.Misc;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -15,6 +16,18 @@ import java.io.IOException;
  * @since 23/03/14 12:59
  */
 public class FileIO {
+
+    /**
+     * Convert an image to a file hash
+     *
+     * @param image A buffered image object
+     * @return A file location including an MD5 hash of the image for the filename
+     * @todo Set temporary directory to user configurable
+     */
+    public static String createFileLocation(BufferedImage image) {
+        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image));
+        return System.getProperty("java.io.tmpdir") + fileName;
+    }
 
     public static BufferedImage takeScreenshot(Rectangle area) {
         try {

@@ -8,8 +8,8 @@ package uk.co.miami_nice.screenshot.io;
  */
 public interface Uploader {
 
-    public void post();
+    public void post(byte[] data);
 
-    public void openURL();
+    public void openImage(String location);
 
 }

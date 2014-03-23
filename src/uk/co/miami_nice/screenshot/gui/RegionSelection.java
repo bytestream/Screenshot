@@ -1,5 +1,7 @@
 package uk.co.miami_nice.screenshot.gui;
 
+import uk.co.miami_nice.screenshot.Driver;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -7,10 +9,6 @@ import java.awt.event.*;
 import java.awt.geom.Area;
 
 public class RegionSelection extends JFrame {
-
-    public static void main(String[] args) {
-        new RegionSelection();
-    }
 
     public RegionSelection() {
         // We don't want the min,max, etc
@@ -68,8 +66,6 @@ public class RegionSelection extends JFrame {
                     int width = dragPoint.x - mouseAnchor.x;
                     int height = dragPoint.y - mouseAnchor.y;
 
-                    System.out.println("Orig X: " + mouseAnchor.x + " Orig Y: " + mouseAnchor.y + "\nDrag X: " + dragPoint.x + " Drag Y: " + dragPoint.y);
-
                     int x = mouseAnchor.x;
                     int y = mouseAnchor.y;
 
@@ -86,8 +82,15 @@ public class RegionSelection extends JFrame {
                     repaint();
                 }
 
+                @Override
                 public void mouseReleased(MouseEvent e) {
-                    System.out.println("Taking screenshot!!");
+                    getRootPane().setVisible(false);
+                    EventQueue.invokeLater(new Runnable() {
+                        @Override
+                        public void run() {
+                            Driver.takeScreenshot(selectionPane.getBounds());
+                        }
+                    });
                 }
             };
             addMouseListener(adapter);
