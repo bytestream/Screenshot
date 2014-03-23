@@ -10,4 +10,6 @@ public interface Uploader {
 
     public void post();
 
+    public void openURL();
+
 }

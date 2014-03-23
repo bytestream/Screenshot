@@ -15,4 +15,9 @@ public class Local implements Uploader {
 
     }
 
+    @Override
+    public void openURL() {
+
+    }
+
 }

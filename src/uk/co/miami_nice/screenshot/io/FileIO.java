@@ -25,11 +25,13 @@ public class FileIO {
         }
     }
 
-    public static void readImage(String location) {
+    public static BufferedImage readImage(String location) {
         try {
             BufferedImage image = ImageIO.read(new File(location));
+            return image;
         } catch (IOException e) {
             e.printStackTrace();
+            return UIUtil.createImage(0, 0, 0);
         }
     }
 
