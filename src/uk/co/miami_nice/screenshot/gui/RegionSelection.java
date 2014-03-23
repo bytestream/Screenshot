@@ -18,6 +18,9 @@ public class RegionSelection extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(new ContentPane());
 
+        // Set icon
+        setIconImage(new ImageIcon("img/icon.png").getImage());
+
         // Set cursor
         getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
 
