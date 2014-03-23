@@ -13,7 +13,7 @@ import java.net.*;
  * @package uk.co.miami_nice.screenshot.io.uploaders
  * @since 23/03/14 18:20
  */
-public class Miami_Nice implements Uploader {
+public class Personal implements Uploader {
 
     /**
      * Upload URL
