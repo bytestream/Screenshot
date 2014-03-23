@@ -3,10 +3,7 @@ package uk.co.miami_nice.screenshot.gui;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.geom.Area;
 
 public class RegionSelection extends JFrame {
@@ -16,16 +13,31 @@ public class RegionSelection extends JFrame {
     }
 
     public RegionSelection() {
+        // We don't want the min,max, etc
         setUndecorated(true);
+        // Transparent
         setBackground(new Color(0, 0, 0, 0)); // DO NOT REMOVE
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout());
         add(new ContentPane());
+
+        // When the escape key is pressed exit
+        ActionListener escListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        };
+        getRootPane().registerKeyboardAction(
+                escListener,
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
+                JComponent.WHEN_IN_FOCUSED_WINDOW
+        );
+
         setBounds(getScreenViewableBounds());
         setVisible(true);
     }
 
-    public class ContentPane extends JPanel {
+    private class ContentPane extends JPanel {
 
         private Point mouseAnchor;
         private Point dragPoint;
@@ -37,6 +49,7 @@ public class RegionSelection extends JFrame {
             setLayout(null);
             selectionPane = new SelectionPane();
             add(selectionPane);
+
             MouseAdapter adapter = new MouseAdapter() {
                 @Override
                 public void mousePressed(MouseEvent e) {
@@ -52,6 +65,8 @@ public class RegionSelection extends JFrame {
                     int width = dragPoint.x - mouseAnchor.x;
                     int height = dragPoint.y - mouseAnchor.y;
 
+                    System.out.println("Orig X: " + mouseAnchor.x + " Orig Y: " + mouseAnchor.y + "\nDrag X: " + dragPoint.x + " Drag Y: " + dragPoint.y);
+
                     int x = mouseAnchor.x;
                     int y = mouseAnchor.y;
 
@@ -66,6 +81,10 @@ public class RegionSelection extends JFrame {
                     selectionPane.setBounds(x, y, width, height);
                     selectionPane.revalidate();
                     repaint();
+                }
+
+                public void mouseReleased(MouseEvent e) {
+                    System.out.println("Taking screenshot!!");
                 }
             };
             addMouseListener(adapter);
@@ -88,7 +107,7 @@ public class RegionSelection extends JFrame {
         }
     }
 
-    public class SelectionPane extends JPanel {
+    private class SelectionPane extends JPanel {
 
         private JLabel label;
 
@@ -101,13 +120,6 @@ public class RegionSelection extends JFrame {
             label.setBorder(new EmptyBorder(4, 4, 4, 4));
             label.setForeground(Color.DARK_GRAY);
             add(label, BorderLayout.SOUTH);
-
-//            button.addActionListener(new ActionListener() {
-//                @Override
-//                public void actionPerformed(ActionEvent e) {
-//                    SwingUtilities.getWindowAncestor(SelectionPane.this).dispose();
-//                }
-//            });
 
             addComponentListener(new ComponentAdapter() {
                 @Override
@@ -122,25 +134,18 @@ public class RegionSelection extends JFrame {
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             Graphics2D g2d = (Graphics2D) g.create();
-            // I've chosen NOT to fill this selection rectangle, so that
-            // it now appears as if you're "cutting" away the selection
-//            g2d.setColor(new Color(128, 128, 128, 64));
-//            g2d.fillRect(0, 0, getWidth(), getHeight());
 
             float dash1[] = {10.0f};
-            BasicStroke dashed =
-                    new BasicStroke(3.0f,
-                            BasicStroke.CAP_BUTT,
-                            BasicStroke.JOIN_MITER,
-                            10.0f, dash1, 0.0f);
-            g2d.setColor(Color.BLACK);
+            BasicStroke dashed = new BasicStroke(1.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10.0f, dash1, 0.0f);
+            g2d.setColor(Color.LIGHT_GRAY);
             g2d.setStroke(dashed);
             g2d.drawRect(0, 0, getWidth() - 3, getHeight() - 3);
+            g2d.setBackground(Color.GRAY);
             g2d.dispose();
         }
     }
 
-    public static Rectangle getScreenViewableBounds() {
+    private static Rectangle getScreenViewableBounds() {
         GraphicsDevice[] devices = GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices();
         int minx = Integer.MAX_VALUE;
         int miny = Integer.MAX_VALUE;
