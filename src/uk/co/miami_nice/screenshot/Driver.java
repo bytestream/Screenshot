@@ -2,10 +2,11 @@ package uk.co.miami_nice.screenshot;
 
 import uk.co.miami_nice.screenshot.gui.RegionSelection;
 import uk.co.miami_nice.screenshot.io.FileIO;
-import uk.co.miami_nice.screenshot.io.uploaders.Local;
+import uk.co.miami_nice.screenshot.io.uploaders.Miami_Nice;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 
 /**
  * @author Kieran Brahney
@@ -33,7 +34,9 @@ public class Driver {
         // TODO: Change PNG to user configurable
         String loc = FileIO.writeImage(image, FileIO.createFileLocation(image), "png");
         // TODO: Set uploader to be configurable
-        new Local().openImage(loc);
+        Miami_Nice uploader = new Miami_Nice();
+        String response = uploader.post(new File(loc));
+        uploader.openImage(response);
         System.exit(0);
     }
 

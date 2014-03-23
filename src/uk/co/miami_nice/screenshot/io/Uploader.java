@@ -1,7 +1,6 @@
 package uk.co.miami_nice.screenshot.io;
 
 import java.io.File;
-import java.util.ArrayList;
 
 /**
  * @author Kieran Brahney
@@ -17,7 +16,7 @@ public interface Uploader {
 
     final String charset = "UTF-8";
 
-    public ArrayList post(File file);
+    public String post(File file);
 
     public void openImage(String location);
 

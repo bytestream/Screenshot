@@ -6,7 +6,6 @@ import uk.co.miami_nice.screenshot.io.Uploader;
 import java.awt.*;
 import java.io.*;
 import java.net.*;
-import java.util.ArrayList;
 
 /**
  * @author Kieran Brahney
@@ -19,15 +18,18 @@ public class Miami_Nice implements Uploader {
     /**
      * Upload URL
      */
-    private final String URL = "http://uk1.focushosting.com/upload.php";
+    private final String URL = "https://uk1.focushosting.com/upload.php";
 
     @Override
-    public ArrayList post(File binaryFile) {
+    public String post(File binaryFile) {
+        // TODO: update to use InstallCert and set the trust store based on this
+        System.setProperty("javax.net.ssl.trustStore", "jssecacerts");
         URLConnection connection = null;
         PrintWriter writer = null;
 
         try {
             connection = new URL(URL).openConnection();
+            connection.setDoInput(true);
             connection.setDoOutput(true);
             connection.setRequestProperty("Content-Type",
                     "multipart/form-data; boundary=" + boundary);
@@ -72,40 +74,20 @@ public class Miami_Nice implements Uploader {
 
         // Get the response text
         Gson gson = new Gson();
-        ArrayList response = gson.fromJson(getResponse(connection), ArrayList.class);
-        return response;
+        Response response = gson.fromJson(getResponse(connection), Response.class);
+        return response.getURL();
     }
 
     private String getResponse(URLConnection connection) {
         String response = "";
 
-        String contentType = connection.getHeaderField("Content-Type");
-        String charset = null;
-        for (String param : contentType.replace(" ", "").split(";")) {
-            if (param.startsWith("charset=")) {
-                charset = param.split("=", 2)[1];
-                break;
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), charset));
+            for (String line; (line = reader.readLine()) != null; ) {
+                response += line + "\n";
             }
-        }
-
-        if (charset != null) {
-            BufferedReader reader = null;
-            try {
-                reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), charset));
-                for (String line; (line = reader.readLine()) != null; ) {
-                    response += line + "\n";
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    reader.close();
-                } catch (IOException logOrIgnore) {
-                }
-            }
-        } else {
-            // TODO: Binary content - unexpected output...
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         return response;
@@ -120,6 +102,21 @@ public class Miami_Nice implements Uploader {
             e.printStackTrace();
         } catch (URISyntaxException e) {
             e.printStackTrace();
+        }
+    }
+
+    private class Response {
+
+        private String URL;
+
+        private String size;
+
+        private String getURL() {
+            return URL;
+        }
+
+        private String getSize() {
+            return size;
         }
     }
 

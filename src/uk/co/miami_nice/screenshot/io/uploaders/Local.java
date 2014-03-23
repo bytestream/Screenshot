@@ -14,8 +14,9 @@ import java.io.IOException;
  */
 public class Local implements Uploader {
 
-    public void post(byte[] data) {
+    public String post(File file) {
         // Nothing to post
+        return "";
     }
 
     public void openImage(String location) {
