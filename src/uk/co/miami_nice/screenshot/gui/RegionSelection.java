@@ -20,6 +20,9 @@ public class RegionSelection extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(new ContentPane());
 
+        // Set cursor
+        getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
+
         // When the escape key is pressed exit
         ActionListener escListener = new ActionListener() {
             @Override
