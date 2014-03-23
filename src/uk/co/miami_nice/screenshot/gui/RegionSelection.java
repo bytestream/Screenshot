@@ -111,6 +111,8 @@ public class RegionSelection extends JFrame {
 
         private JLabel label;
 
+        private int prevX = 0, prevY = 0;
+
         public SelectionPane() {
             setOpaque(false);
             setLayout(new BorderLayout());
@@ -124,7 +126,13 @@ public class RegionSelection extends JFrame {
             addComponentListener(new ComponentAdapter() {
                 @Override
                 public void componentResized(ComponentEvent e) {
-                    label.setText("<html>" + getX() + "<br />" + getY() + "</html>");
+                    int x = (prevX == getX()) ? getWidth() : getX();
+                    int y = (prevY == getY()) ? getHeight() : getY();
+                    label.setText("<html>" + x + "<br />" + y + "</html>");
+
+                    // Store previous X/Y values
+                    prevX = getX();
+                    prevY = getY();
                 }
             });
 
