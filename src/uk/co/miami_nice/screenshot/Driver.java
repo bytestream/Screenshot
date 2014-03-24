@@ -1,6 +1,6 @@
 package uk.co.miami_nice.screenshot;
 
-import uk.co.miami_nice.screenshot.gui.RegionSelection;
+import uk.co.miami_nice.screenshot.gui.Interface;
 import uk.co.miami_nice.screenshot.io.FileIO;
 import uk.co.miami_nice.screenshot.io.uploaders.Personal;
 
@@ -20,8 +20,12 @@ public class Driver {
      * @param args
      */
     public static void main(String[] args) {
-        // Region select screenshot
-        new RegionSelection();
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new Interface();
+            }
+        });
     }
 
     /**
@@ -37,7 +41,6 @@ public class Driver {
         Personal uploader = new Personal();
         String response = uploader.post(new File(loc));
         uploader.openImage(response);
-        System.exit(0);
     }
 
 }
