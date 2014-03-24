@@ -92,6 +92,7 @@ public class RegionSelection extends JFrame {
                         @Override
                         public void run() {
                             Driver.takeScreenshot(selectionPane.getBounds());
+                            dispose();
                         }
                     });
                 }
