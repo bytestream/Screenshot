@@ -28,7 +28,7 @@ public class RegionSelection extends JFrame {
         ActionListener escListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                dispose();
             }
         };
         getRootPane().registerKeyboardAction(
