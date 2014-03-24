@@ -1,4 +1,6 @@
-package uk.co.miami_nice.screenshot;
+package uk.co.miami_nice.screenshot.net;
+
+import uk.co.miami_nice.screenshot.Config;
 
 import javax.net.ssl.*;
 import java.io.*;
@@ -13,28 +15,34 @@ import java.security.cert.X509Certificate;
  */
 public class InstallCert {
 
-    public static void main(String[] args) throws Exception {
-        String host;
-        int port;
-        char[] passphrase;
-        if ((args.length == 1) || (args.length == 2)) {
-            String[] c = args[0].split(":");
-            host = c[0];
-            port = (c.length == 1) ? 443 : Integer.parseInt(c[1]);
-            String p = (args.length == 1) ? "changeit" : args[1];
-            passphrase = p.toCharArray();
-        } else {
-            System.out.println("Usage: java InstallCert [:port] [passphrase]");
-            return;
-        }
+    private String host;
 
+    private int port = 443;
+
+    private char[] passphrase = "changeit".toCharArray();
+
+    public InstallCert(String host) throws Exception {
+        this.host = host;
+
+        init();
+    }
+
+    public InstallCert(String host, int port, String passphrase) throws Exception {
+        this.host = host;
+        this.port = port;
+        this.passphrase = passphrase.toCharArray();
+
+        init();
+    }
+
+    private void init() throws Exception {
         File file = new File("jssecacerts");
-        if (file.isFile() == false) {
+        if (!file.isFile()) {
             char SEP = File.separatorChar;
             File dir = new File(System.getProperty("java.home") + SEP
                     + "lib" + SEP + "security");
             file = new File(dir, "jssecacerts");
-            if (file.isFile() == false) {
+            if (!file.isFile()) {
                 file = new File(dir, "cacerts");
             }
         }
@@ -73,9 +81,6 @@ public class InstallCert {
             return;
         }
 
-        BufferedReader reader =
-                new BufferedReader(new InputStreamReader(System.in));
-
         System.out.println();
         System.out.println("Server sent " + chain.length + " certificate(s):");
         System.out.println();
@@ -93,21 +98,11 @@ public class InstallCert {
             System.out.println();
         }
 
-        System.out.println("Enter certificate to add to trusted keystore or 'q' to quit: [1]");
-        String line = reader.readLine().trim();
-        int k;
-        try {
-            k = (line.length() == 0) ? 0 : Integer.parseInt(line) - 1;
-        } catch (NumberFormatException e) {
-            System.out.println("KeyStore not changed");
-            return;
-        }
-
-        X509Certificate cert = chain[k];
-        String alias = host + "-" + (k + 1);
+        X509Certificate cert = chain[0];
+        String alias = host + "-" + (1);
         ks.setCertificateEntry(alias, cert);
 
-        OutputStream out = new FileOutputStream("jssecacerts");
+        OutputStream out = new FileOutputStream(Config.getSSLTrustedStore());
         ks.store(out, passphrase);
         out.close();
 

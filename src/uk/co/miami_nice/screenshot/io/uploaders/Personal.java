@@ -1,7 +1,9 @@
 package uk.co.miami_nice.screenshot.io.uploaders;
 
 import com.google.gson.Gson;
+import uk.co.miami_nice.screenshot.Config;
 import uk.co.miami_nice.screenshot.io.Uploader;
+import uk.co.miami_nice.screenshot.net.InstallCert;
 
 import java.awt.*;
 import java.io.*;
@@ -27,8 +29,16 @@ public class Personal implements Uploader {
      * @return The URL to the uploaded file
      */
     public String post(File binaryFile) {
-        // TODO: update to use InstallCert and set the trust store based on this
-        System.setProperty("javax.net.ssl.trustStore", "jssecacerts");
+        // Get the self-signed SSL certificate
+        try {
+            //
+            new InstallCert(URL.substring(URL.indexOf("/") + 2, URL.lastIndexOf("/")));
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "";
+        }
+        System.setProperty("javax.net.ssl.trustStore", Config.getSSLTrustedStore());
+
         URLConnection connection = null;
         PrintWriter writer = null;
 
