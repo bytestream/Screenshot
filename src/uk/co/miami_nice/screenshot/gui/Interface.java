@@ -1,5 +1,6 @@
 package uk.co.miami_nice.screenshot.gui;
 
+import uk.co.miami_nice.screenshot.CaptureType;
 import uk.co.miami_nice.screenshot.Driver;
 
 import javax.swing.*;
@@ -70,7 +71,7 @@ public class Interface implements ActionListener {
             Rectangle area = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
             Driver.takeScreenshot(area);
         } else if (actionEvent.getSource() == regionItem) {
-            new RegionSelection();
+            new RegionSelection(CaptureType.VIDEO);
         } else if (actionEvent.getSource() == exitItem) {
             tray.remove(trayIcon);
             System.exit(0);

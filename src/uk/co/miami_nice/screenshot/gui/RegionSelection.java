@@ -1,22 +1,28 @@
 package uk.co.miami_nice.screenshot.gui;
 
+import uk.co.miami_nice.screenshot.CaptureType;
 import uk.co.miami_nice.screenshot.Driver;
+import uk.co.miami_nice.screenshot.io.FileIO;
+import uk.co.miami_nice.screenshot.io.JpegImagesToMovie;
 
+import javax.media.MediaLocator;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.Area;
+import java.awt.image.BufferedImage;
+import java.util.Vector;
 
 public class RegionSelection extends JFrame {
 
-    public RegionSelection() {
+    public RegionSelection(CaptureType type) {
         // We don't want the min,max, etc
         setUndecorated(true);
         // Transparent
         setBackground(new Color(0, 0, 0, 0)); // DO NOT REMOVE
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        add(new ContentPane());
+        add(new ContentPane(type));
 
         // Set icon
         setIconImage(new ImageIcon("img/icon.png").getImage());
@@ -48,7 +54,7 @@ public class RegionSelection extends JFrame {
 
         private SelectionPane selectionPane;
 
-        public ContentPane() {
+        public ContentPane(final CaptureType type) {
             setOpaque(false);
             setLayout(null);
             selectionPane = new SelectionPane();
@@ -91,7 +97,30 @@ public class RegionSelection extends JFrame {
                     EventQueue.invokeLater(new Runnable() {
                         @Override
                         public void run() {
-                            Driver.takeScreenshot(selectionPane.getBounds());
+                            switch (type) {
+                                case IMAGE:
+                                    Driver.takeScreenshot(selectionPane.getBounds());
+                                    break;
+                                case VIDEO:
+                                    Vector inputFiles = new Vector();
+
+                                    long tStart = System.currentTimeMillis();
+                                    int i;
+                                    for (i = 0; i < 300; i++) {
+                                        BufferedImage img = FileIO.takeScreenshot(selectionPane.getBounds());
+                                        inputFiles.add(FileIO.writeImage(img, FileIO.createFileLocation(img), "jpg"));
+                                    }
+                                    long tEnd = System.currentTimeMillis();
+                                    int frameRate = (int) (Math.round(i / ((tEnd - tStart) / 1000.0)));
+
+                                    JpegImagesToMovie imageToMovie = new JpegImagesToMovie();
+                                    MediaLocator oml = JpegImagesToMovie.createMediaLocator("movie.mov");
+                                    imageToMovie.doIt(selectionPane.getWidth(), selectionPane.getHeight(), frameRate, inputFiles, oml);
+
+                                    break;
+                            }
+
+                            // Finish up
                             dispose();
                         }
                     });
