@@ -6,6 +6,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.HashSet;
 
 /**
  * @author Kieran Brahney
@@ -68,6 +70,19 @@ public class Misc {
         }
 
         return hash;
+    }
+
+    /**
+     * Remove duplicate items from an array of strings
+     *
+     * @param array Array of strings
+     * @return Unique elements of the array
+     */
+    public static String[] unique(String[] array) {
+        for (int i = 0; i < array.length; i++)
+            array[i] = array[i].toLowerCase();
+
+        return new HashSet<String>(Arrays.asList(array)).toArray(new String[0]);
     }
 
 }

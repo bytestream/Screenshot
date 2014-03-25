@@ -2,17 +2,12 @@ package uk.co.miami_nice.screenshot.gui;
 
 import uk.co.miami_nice.screenshot.CaptureType;
 import uk.co.miami_nice.screenshot.Driver;
-import uk.co.miami_nice.screenshot.io.FileIO;
-import uk.co.miami_nice.screenshot.io.video.JpegImagesToMovie;
-import uk.co.miami_nice.screenshot.misc.Misc;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.Area;
-import java.awt.image.BufferedImage;
-import java.util.Vector;
 
 public class RegionSelection extends JFrame {
 
@@ -57,7 +52,7 @@ public class RegionSelection extends JFrame {
         public ContentPane(final CaptureType type) {
             setOpaque(false);
             setLayout(null);
-            selectionPane = new SelectionPane();
+            selectionPane = new SelectionPane(type);
             add(selectionPane);
 
             MouseAdapter adapter = new MouseAdapter() {
@@ -93,36 +88,20 @@ public class RegionSelection extends JFrame {
 
                 @Override
                 public void mouseReleased(MouseEvent e) {
-                    getRootPane().setVisible(false);
-                    EventQueue.invokeLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            switch (type) {
-                                case IMAGE:
-                                    Driver.takeScreenshot(selectionPane.getBounds());
-                                    break;
-                                case VIDEO:
-                                    Vector inputFiles = new Vector();
-
-                                    long tStart = System.currentTimeMillis();
-                                    int i;
-                                    for (i = 0; i < 300; i++) {
-                                        BufferedImage img = FileIO.takeScreenshot(selectionPane.getBounds());
-                                        inputFiles.add(Misc.imageToByteArray(img, "jpg"));
-                                    }
-                                    long tEnd = System.currentTimeMillis();
-                                    int frameRate = (int) (Math.round(i / ((tEnd - tStart) / 1000.0)));
-
-                                    JpegImagesToMovie imageToMovie = new JpegImagesToMovie();
-                                    imageToMovie.doIt(selectionPane.getWidth(), selectionPane.getHeight(), frameRate, inputFiles, "movie.mov");
-
-                                    break;
-                            }
-
-                            // Finish up
-                            dispose();
-                        }
-                    });
+                    switch (type) {
+                        case VIDEO:
+                            Driver.capture(selectionPane.getBounds(), CaptureType.VIDEO);
+                            break;
+                        default:
+                            getRootPane().setVisible(false);
+                            EventQueue.invokeLater(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Driver.capture(selectionPane.getBounds(), CaptureType.IMAGE);
+                                }
+                            });
+                    }
+                    dispose();
                 }
             };
             addMouseListener(adapter);
@@ -151,7 +130,7 @@ public class RegionSelection extends JFrame {
 
         private int prevX = 0, prevY = 0;
 
-        public SelectionPane() {
+        public SelectionPane(CaptureType type) {
             setOpaque(false);
             setLayout(new BorderLayout());
 

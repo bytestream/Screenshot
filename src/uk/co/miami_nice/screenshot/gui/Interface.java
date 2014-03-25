@@ -1,9 +1,7 @@
 package uk.co.miami_nice.screenshot.gui;
 
 import uk.co.miami_nice.screenshot.CaptureType;
-import uk.co.miami_nice.screenshot.Driver;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,10 +18,9 @@ public class Interface implements ActionListener {
     private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("img/icon.png"));
     private final SystemTray tray = SystemTray.getSystemTray();
 
-    private MenuItem aboutItem = new MenuItem("About");
     private MenuItem configureItem = new MenuItem("Configure");
-    private MenuItem fullScreenItem = new MenuItem("Fullscreen Capture");
-    private MenuItem regionItem = new MenuItem("Regional Capture");
+    private MenuItem imageItem = new MenuItem("Image Capture");
+    private MenuItem videoItem = new MenuItem("Video Capture");
     private MenuItem exitItem = new MenuItem("Exit");
 
     public Interface() {
@@ -37,15 +34,13 @@ public class Interface implements ActionListener {
         trayIcon.setImageAutoSize(true);
 
         // Add components to popup menu
-        popup.add(aboutItem);
-        aboutItem.addActionListener(this);
         popup.add(configureItem);
         configureItem.addActionListener(this);
         popup.addSeparator();
-        popup.add(fullScreenItem);
-        fullScreenItem.addActionListener(this);
-        popup.add(regionItem);
-        regionItem.addActionListener(this);
+        popup.add(imageItem);
+        imageItem.addActionListener(this);
+        popup.add(videoItem);
+        videoItem.addActionListener(this);
         popup.addSeparator();
         popup.add(exitItem);
         exitItem.addActionListener(this);
@@ -61,17 +56,15 @@ public class Interface implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if (actionEvent.getSource() == aboutItem) {
-            JOptionPane.showMessageDialog(null,
-                    "This dialog box is run from the About menu item");
-        } else if (actionEvent.getSource() == configureItem) {
-            JOptionPane.showMessageDialog(null,
-                    "Not yet implemented");
-        } else if (actionEvent.getSource() == fullScreenItem) {
-            Rectangle area = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
-            Driver.takeScreenshot(area);
-        } else if (actionEvent.getSource() == regionItem) {
+        if (actionEvent.getSource() == configureItem) {
+            new Configure();
+
+        } else if (actionEvent.getSource() == imageItem) {
+            new RegionSelection(CaptureType.IMAGE);
+
+        } else if (actionEvent.getSource() == videoItem) {
             new RegionSelection(CaptureType.VIDEO);
+
         } else if (actionEvent.getSource() == exitItem) {
             tray.remove(trayIcon);
             System.exit(0);

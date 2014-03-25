@@ -22,6 +22,15 @@ public class Personal implements Uploader {
      */
     private final String URL = "https://uk1.miami-nice.co.uk/upload.php";
 
+    /**
+     * Get a human meaningful name for the uploader service
+     *
+     * @return String name
+     */
+    public String getName() {
+        return "Personal";
+    }
+
     @Override
     /**
      * Upload the specified binary file (image) to a given web server

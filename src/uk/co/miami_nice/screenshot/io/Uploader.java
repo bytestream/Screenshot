@@ -26,6 +26,13 @@ public interface Uploader {
     final String charset = "UTF-8";
 
     /**
+     * Get a human meaningful name for the uploader service
+     *
+     * @return String name
+     */
+    public String getName();
+
+    /**
      * Upload the specified binary file (image) to a given web server
      *
      * @param file Location of the file to upload
