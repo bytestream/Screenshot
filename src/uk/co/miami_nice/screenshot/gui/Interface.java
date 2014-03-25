@@ -14,6 +14,8 @@ import java.awt.event.ActionListener;
  */
 public class Interface implements ActionListener {
 
+    private final Configure configureInterface = new Configure();
+
     private final PopupMenu popup = new PopupMenu();
     private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("img/icon.png"));
     private final SystemTray tray = SystemTray.getSystemTray();
@@ -57,7 +59,7 @@ public class Interface implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getSource() == configureItem) {
-            new Configure();
+            configureInterface.setVisible(true);
 
         } else if (actionEvent.getSource() == imageItem) {
             new RegionSelection(CaptureType.IMAGE);

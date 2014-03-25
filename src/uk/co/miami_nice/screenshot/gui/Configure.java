@@ -121,7 +121,7 @@ public class Configure extends JDialog {
         });
 
         pack();
-        setVisible(true);
+        setVisible(false);
     }
 
     /**
