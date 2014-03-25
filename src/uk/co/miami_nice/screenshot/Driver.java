@@ -36,7 +36,7 @@ public class Driver {
     public static void takeScreenshot(Rectangle area) {
         BufferedImage image = FileIO.takeScreenshot(area);
         // TODO: Change PNG to user configurable
-        String loc = FileIO.writeImage(image, FileIO.createFileLocation(image), "png");
+        String loc = FileIO.writeImage(image, FileIO.createFileLocation(image), "jpg");
         // TODO: Set uploader to be configurable
         Personal uploader = new Personal();
         String response = uploader.post(new File(loc));

@@ -25,7 +25,7 @@ public class FileIO {
      * @todo Set temporary directory to user configurable
      */
     public static String createFileLocation(BufferedImage image) {
-        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image));
+        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image, "jpg"));
         return System.getProperty("java.io.tmpdir") + fileName;
     }
 

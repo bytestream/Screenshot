@@ -3,9 +3,9 @@ package uk.co.miami_nice.screenshot.gui;
 import uk.co.miami_nice.screenshot.CaptureType;
 import uk.co.miami_nice.screenshot.Driver;
 import uk.co.miami_nice.screenshot.io.FileIO;
-import uk.co.miami_nice.screenshot.io.JpegImagesToMovie;
+import uk.co.miami_nice.screenshot.io.video.JpegImagesToMovie;
+import uk.co.miami_nice.screenshot.misc.Misc;
 
-import javax.media.MediaLocator;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -108,14 +108,13 @@ public class RegionSelection extends JFrame {
                                     int i;
                                     for (i = 0; i < 300; i++) {
                                         BufferedImage img = FileIO.takeScreenshot(selectionPane.getBounds());
-                                        inputFiles.add(FileIO.writeImage(img, FileIO.createFileLocation(img), "jpg"));
+                                        inputFiles.add(Misc.imageToByteArray(img, "jpg"));
                                     }
                                     long tEnd = System.currentTimeMillis();
                                     int frameRate = (int) (Math.round(i / ((tEnd - tStart) / 1000.0)));
 
                                     JpegImagesToMovie imageToMovie = new JpegImagesToMovie();
-                                    MediaLocator oml = JpegImagesToMovie.createMediaLocator("movie.mov");
-                                    imageToMovie.doIt(selectionPane.getWidth(), selectionPane.getHeight(), frameRate, inputFiles, oml);
+                                    imageToMovie.doIt(selectionPane.getWidth(), selectionPane.getHeight(), frameRate, inputFiles, "movie.mov");
 
                                     break;
                             }

@@ -20,7 +20,7 @@ public class Personal implements Uploader {
     /**
      * Upload URL
      */
-    private final String URL = "https://uk1.focushosting.com/upload.php";
+    private final String URL = "https://uk1.miami-nice.co.uk/upload.php";
 
     @Override
     /**

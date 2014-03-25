@@ -18,15 +18,16 @@ public class Misc {
     /**
      * Convert a bufferedimage object to a byte array
      *
-     * @param image BufferedImage object stored in-memory
+     * @param image     BufferedImage object stored in-memory
+     * @param imageType
      * @return The converted object as a byte array
      */
-    public static byte[] imageToByteArray(BufferedImage image) {
+    public static byte[] imageToByteArray(BufferedImage image, String imageType) {
         byte[] res = new byte[0];
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
-            ImageIO.write(image, "png", baos);
+            ImageIO.write(image, imageType, baos);
             baos.flush();
             res = baos.toByteArray();
         } catch (IOException e) {
