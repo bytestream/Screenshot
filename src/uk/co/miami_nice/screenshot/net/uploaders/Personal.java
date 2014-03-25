@@ -1,9 +1,9 @@
-package uk.co.miami_nice.screenshot.io.uploaders;
+package uk.co.miami_nice.screenshot.net.uploaders;
 
 import com.google.gson.Gson;
 import uk.co.miami_nice.screenshot.Config;
-import uk.co.miami_nice.screenshot.io.Uploader;
 import uk.co.miami_nice.screenshot.net.InstallCert;
+import uk.co.miami_nice.screenshot.net.Uploader;
 
 import java.awt.*;
 import java.io.*;
@@ -12,7 +12,7 @@ import java.net.*;
 /**
  * @author Kieran Brahney
  * @version 1.0
- * @package uk.co.miami_nice.screenshot.io.uploaders
+ * @package uk.co.miami_nice.screenshot.net.uploaders
  * @since 23/03/14 18:20
  */
 public class Personal implements Uploader {

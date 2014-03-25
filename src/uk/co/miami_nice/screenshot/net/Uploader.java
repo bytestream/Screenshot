@@ -1,4 +1,4 @@
-package uk.co.miami_nice.screenshot.io;
+package uk.co.miami_nice.screenshot.net;
 
 import java.io.File;
 

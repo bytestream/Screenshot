@@ -2,9 +2,9 @@ package uk.co.miami_nice.screenshot;
 
 import uk.co.miami_nice.screenshot.gui.Interface;
 import uk.co.miami_nice.screenshot.io.FileIO;
-import uk.co.miami_nice.screenshot.io.uploaders.Personal;
 import uk.co.miami_nice.screenshot.io.video.JpegImagesToMovie;
 import uk.co.miami_nice.screenshot.misc.Misc;
+import uk.co.miami_nice.screenshot.net.Uploader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -55,12 +55,14 @@ public class Driver {
                 break;
             default:
                 BufferedImage image = FileIO.takeScreenshot(area);
-                // TODO: Change PNG to user configurable
-                String loc = FileIO.writeImage(image, FileIO.createFileLocation(image), "jpg");
-                // TODO: Set uploader to be configurable
-                Personal uploader = new Personal();
-                String response = uploader.post(new File(loc));
-                uploader.openImage(response);
+                String loc = FileIO.writeImage(image, FileIO.createFileLocation(image), Config.getImageFormat());
+                try {
+                    Uploader uploader = (Uploader) Config.uploadMethodToClass().newInstance();
+                    String response = uploader.post(new File(loc));
+                    uploader.openImage(response);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
         }
     }
 

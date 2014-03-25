@@ -1,6 +1,7 @@
 package uk.co.miami_nice.screenshot.io;
 
 import com.intellij.util.ui.UIUtil;
+import uk.co.miami_nice.screenshot.Config;
 import uk.co.miami_nice.screenshot.misc.Misc;
 
 import javax.imageio.ImageIO;
@@ -25,8 +26,8 @@ public class FileIO {
      * @todo Set temporary directory to user configurable
      */
     public static String createFileLocation(BufferedImage image) {
-        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image, "jpg"));
-        return System.getProperty("java.io.tmpdir") + fileName;
+        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image, Config.getImageFormat()));
+        return Config.getOutputDirectory() + fileName;
     }
 
     /**

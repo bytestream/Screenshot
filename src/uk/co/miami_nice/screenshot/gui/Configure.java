@@ -5,8 +5,8 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import uk.co.miami_nice.screenshot.Config;
-import uk.co.miami_nice.screenshot.io.Uploader;
 import uk.co.miami_nice.screenshot.misc.Misc;
+import uk.co.miami_nice.screenshot.net.Uploader;
 import uk.co.miami_nice.screenshot.util.JavaClassFinder;
 
 import javax.imageio.ImageIO;
@@ -129,10 +129,6 @@ public class Configure extends JDialog {
 
         pack();
         setVisible(true);
-    }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 
     /**

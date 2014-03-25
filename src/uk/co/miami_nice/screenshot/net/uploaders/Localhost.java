@@ -1,6 +1,6 @@
-package uk.co.miami_nice.screenshot.io.uploaders;
+package uk.co.miami_nice.screenshot.net.uploaders;
 
-import uk.co.miami_nice.screenshot.io.Uploader;
+import uk.co.miami_nice.screenshot.net.Uploader;
 
 import java.awt.*;
 import java.io.File;
@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * @author Kieran Brahney
  * @version 1.0
- * @package uk.co.miami_nice.screenshot.io.uploaders
+ * @package uk.co.miami_nice.screenshot.net.uploaders
  * @since 23/03/14 17:36
  */
 public class Localhost implements Uploader {
@@ -32,7 +32,7 @@ public class Localhost implements Uploader {
      */
     public String post(File file) {
         // Nothing to post
-        return "";
+        return file.getAbsolutePath();
     }
 
     /**

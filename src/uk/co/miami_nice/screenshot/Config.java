@@ -1,6 +1,6 @@
 package uk.co.miami_nice.screenshot;
 
-import uk.co.miami_nice.screenshot.io.Uploader;
+import uk.co.miami_nice.screenshot.net.Uploader;
 import uk.co.miami_nice.screenshot.util.JavaClassFinder;
 
 import javax.imageio.ImageIO;
@@ -44,6 +44,26 @@ public class Config implements Serializable {
 
     public static String getUploadMethod() {
         return uploadMethod;
+    }
+
+    public static Class uploadMethodToClass() {
+        JavaClassFinder classFinder = new JavaClassFinder();
+        List<Class<? extends Uploader>> classes = classFinder.findAllMatchingTypes(Uploader.class);
+        for (Class c : classes) {
+            try {
+                Method m = c.getMethod("getName", null);
+                Object res = m.invoke(c.newInstance());
+                String s = (String) res;
+
+                if (s.equals(uploadMethod))
+                    return c;
+            } catch (Exception e) {
+                // No associated upload class
+                e.printStackTrace();
+            }
+        }
+
+        return null;
     }
 
     public static void setUploadMethod(String uploadMethod) {
