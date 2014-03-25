@@ -1,6 +1,6 @@
 package uk.co.miami_nice.screenshot.net;
 
-import uk.co.miami_nice.screenshot.Config;
+import uk.co.miami_nice.screenshot.Driver;
 
 import javax.net.ssl.*;
 import java.io.*;
@@ -102,7 +102,7 @@ public class InstallCert {
         String alias = host + "-" + (1);
         ks.setCertificateEntry(alias, cert);
 
-        OutputStream out = new FileOutputStream(Config.getSSLTrustedStore());
+        OutputStream out = new FileOutputStream(Driver.getConfig().getSSL_TRUST_STORE_LOCATION());
         ks.store(out, passphrase);
         out.close();
 

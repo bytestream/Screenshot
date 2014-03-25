@@ -1,7 +1,7 @@
 package uk.co.miami_nice.screenshot.io;
 
 import com.intellij.util.ui.UIUtil;
-import uk.co.miami_nice.screenshot.Config;
+import uk.co.miami_nice.screenshot.Driver;
 import uk.co.miami_nice.screenshot.misc.Misc;
 
 import javax.imageio.ImageIO;
@@ -23,11 +23,10 @@ public class FileIO {
      *
      * @param image A buffered image object
      * @return A file location including an MD5 hash of the image for the filename
-     * @todo Set temporary directory to user configurable
      */
     public static String createFileLocation(BufferedImage image) {
-        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image, Config.getImageFormat()));
-        return Config.getOutputDirectory() + fileName;
+        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image, Driver.getConfig().getImageFormat()));
+        return Driver.getConfig().getOutputDirectory() + fileName + "." + Driver.getConfig().getImageFormat();
     }
 
     /**

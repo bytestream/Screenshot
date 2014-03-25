@@ -4,7 +4,7 @@ import uk.co.miami_nice.screenshot.net.Uploader;
 import uk.co.miami_nice.screenshot.util.JavaClassFinder;
 
 import javax.imageio.ImageIO;
-import java.io.Serializable;
+import java.io.File;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
@@ -15,38 +15,44 @@ import java.util.List;
  * @package uk.co.miami_nice.screenshot
  * @since 24/03/14 18:25
  */
-public class Config implements Serializable {
+public class Config {
 
-    private static final String SSLTrustedStore = System.getProperty("java.io.tmpdir") + "jssecacerts";
+    private final String CONFIG_LOCATION = System.getProperty("user.home") + File.separator + ".sc-resources";
 
-    private static String imageFormat = "jpg";
+    private final String SSL_TRUST_STORE_LOCATION = System.getProperty("user.home") + File.separator + ".sc-cacerts";
 
-    private static String uploadMethod = "Personal";
+    private String imageFormat = "jpg";
 
-    private static boolean autoUpload = true;
+    private String uploadMethod = "Localhost";
 
-    private static String outputDirectory = System.getProperty("java.io.tmpdir");
+    private boolean autoUpload = true;
 
-    public static String getSSLTrustedStore() {
-        return SSLTrustedStore;
+    private String outputDirectory = System.getProperty("java.io.tmpdir");
+
+    public String getCONFIG_LOCATION() {
+        return CONFIG_LOCATION;
     }
 
-    public static String getImageFormat() {
+    public String getSSL_TRUST_STORE_LOCATION() {
+        return SSL_TRUST_STORE_LOCATION;
+    }
+
+    public String getImageFormat() {
         return imageFormat;
     }
 
-    public static void setImageFormat(String imageFormat) {
+    public void setImageFormat(String imageFormat) {
         String[] array = ImageIO.getWriterFormatNames();
         if (Arrays.asList(array).contains(imageFormat.toLowerCase())) {
-            Config.imageFormat = imageFormat;
+            this.imageFormat = imageFormat;
         }
     }
 
-    public static String getUploadMethod() {
+    public String getUploadMethod() {
         return uploadMethod;
     }
 
-    public static Class uploadMethodToClass() {
+    public Class uploadMethodToClass() {
         JavaClassFinder classFinder = new JavaClassFinder();
         List<Class<? extends Uploader>> classes = classFinder.findAllMatchingTypes(Uploader.class);
         for (Class c : classes) {
@@ -66,7 +72,7 @@ public class Config implements Serializable {
         return null;
     }
 
-    public static void setUploadMethod(String uploadMethod) {
+    public void setUploadMethod(String uploadMethod) {
         JavaClassFinder classFinder = new JavaClassFinder();
         List<Class<? extends Uploader>> classes = classFinder.findAllMatchingTypes(Uploader.class);
         for (Class c : classes) {
@@ -76,7 +82,7 @@ public class Config implements Serializable {
                 String s = (String) res;
 
                 if (s.equals(uploadMethod))
-                    Config.uploadMethod = uploadMethod;
+                    this.uploadMethod = uploadMethod;
             } catch (Exception e) {
                 // No associated upload class
                 e.printStackTrace();
@@ -86,19 +92,20 @@ public class Config implements Serializable {
         }
     }
 
-    public static boolean isAutoUpload() {
+    public boolean isAutoUpload() {
         return autoUpload;
     }
 
-    public static void setAutoUpload(boolean autoUpload) {
-        Config.autoUpload = autoUpload;
+    public void setAutoUpload(boolean autoUpload) {
+        this.autoUpload = autoUpload;
     }
 
-    public static String getOutputDirectory() {
-        return outputDirectory;
+    public String getOutputDirectory() {
+        return outputDirectory + File.separator;
     }
 
-    public static void setOutputDirectory(String outputDirectory) {
-        Config.outputDirectory = outputDirectory;
+    public void setOutputDirectory(String outputDirectory) {
+        this.outputDirectory = outputDirectory + File.separator;
     }
+
 }

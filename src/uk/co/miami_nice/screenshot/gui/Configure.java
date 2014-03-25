@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
-import uk.co.miami_nice.screenshot.Config;
+import uk.co.miami_nice.screenshot.Driver;
 import uk.co.miami_nice.screenshot.misc.Misc;
 import uk.co.miami_nice.screenshot.net.Uploader;
 import uk.co.miami_nice.screenshot.util.JavaClassFinder;
@@ -20,8 +20,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Configure extends JDialog {
@@ -56,7 +54,7 @@ public class Configure extends JDialog {
         for (String format : unique) {
             imageFormatDropdown.addItem(format);
 
-            if (format.equalsIgnoreCase(Config.getImageFormat()))
+            if (format.equalsIgnoreCase(Driver.getConfig().getImageFormat()))
                 imageFormatDropdown.setSelectedItem(format);
         }
 
@@ -69,14 +67,14 @@ public class Configure extends JDialog {
                 String s;
                 uploadDropdown.addItem(s = (String) m.invoke(c.newInstance()));
 
-                if (s.equalsIgnoreCase(Config.getUploadMethod()))
+                if (s.equalsIgnoreCase(Driver.getConfig().getUploadMethod()))
                     uploadDropdown.setSelectedItem(s);
             } catch (Exception e) {
             }
         }
 
         // Set output directory
-        outputDirectory.setText(Config.getOutputDirectory());
+        outputDirectory.setText(Driver.getConfig().getOutputDirectory());
 
         // Set output directory
         outputDirectory.addMouseListener(new MouseAdapter() {
@@ -98,23 +96,18 @@ public class Configure extends JDialog {
         // Save the configuration
         buttonSave.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Config.setImageFormat((String) imageFormatDropdown.getSelectedItem());
-                Config.setUploadMethod((String) uploadDropdown.getSelectedItem());
-                Config.setAutoUpload(yesRadioButton.isSelected());
-                Config.setOutputDirectory(outputDirectory.getText());
+                Driver.getConfig().setImageFormat((String) imageFormatDropdown.getSelectedItem());
+                Driver.getConfig().setUploadMethod((String) uploadDropdown.getSelectedItem());
+                Driver.getConfig().setAutoUpload(yesRadioButton.isSelected());
+                Driver.getConfig().setOutputDirectory(outputDirectory.getText());
 
                 // Save config
-                Gson gson = new Gson();
-                Collection collection = new ArrayList();
-                collection.add(Config.getImageFormat());
-                collection.add(Config.getUploadMethod());
-                collection.add(Config.isAutoUpload());
-                collection.add(Config.getOutputDirectory());
-                String json = gson.toJson(collection);
+                String json = new Gson().toJson(Driver.getConfig());
 
                 try {
                     //write converted json data to a file named "file.json"
-                    FileWriter writer = new FileWriter("config.json");
+                    FileWriter writer = new FileWriter(Driver.getConfig().getCONFIG_LOCATION());
+                    System.out.println("Written to config: " + Driver.getConfig().getCONFIG_LOCATION());
                     writer.write(json);
                     writer.close();
                     JOptionPane.showMessageDialog(new JPanel(),
