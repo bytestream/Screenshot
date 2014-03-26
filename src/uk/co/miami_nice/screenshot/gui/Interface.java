@@ -17,7 +17,7 @@ public class Interface implements ActionListener {
     private final Configure configureInterface = new Configure();
 
     private final PopupMenu popup = new PopupMenu();
-    private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage("img/icon.png"));
+    private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icon.png")));
     private final SystemTray tray = SystemTray.getSystemTray();
 
     private MenuItem configureItem = new MenuItem("Configure");
