@@ -6,6 +6,7 @@ import uk.co.miami_nice.screenshot.io.FileIO;
 import uk.co.miami_nice.screenshot.io.video.JpegImagesToMovie;
 import uk.co.miami_nice.screenshot.misc.Misc;
 import uk.co.miami_nice.screenshot.net.Uploader;
+import uk.co.miami_nice.screenshot.util.TrayHandler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -14,6 +15,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Kieran Brahney
@@ -29,24 +32,25 @@ public class Driver {
     private static Config config = new Config();
 
     /**
+     * Interface
+     */
+    private static Interface anInterface = new Interface();
+
+    /**
      * @param args
      */
     public static void main(String[] args) {
+        // Load the logger
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).addHandler(new TrayHandler());
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.ALL);
+
         // Load the configuration
         try {
             BufferedReader br = new BufferedReader(new FileReader(config.getCONFIG_LOCATION()));
             config = new Gson().fromJson(br, Config.class);
         } catch (FileNotFoundException e) {
-            System.err.println("Error processing configuration file, resorting to default..");
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).warning("Unable to read configuration file, resorting to default.");
         }
-
-        // Load the interface
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Interface();
-            }
-        });
     }
 
     /**
@@ -91,6 +95,15 @@ public class Driver {
      */
     public static Config getConfig() {
         return config;
+    }
+
+    /**
+     * Static access to the interface object
+     *
+     * @return User interface object
+     */
+    public static Interface getAnInterface() {
+        return anInterface;
     }
 
 }

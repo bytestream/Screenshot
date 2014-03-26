@@ -19,7 +19,7 @@ public class Interface implements ActionListener {
     private final String title = "Screen Capture";
 
     private final PopupMenu popup = new PopupMenu();
-    private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icon.png")));
+    private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage(Interface.class.getResource("/img/icon.png")));
     private final SystemTray tray = SystemTray.getSystemTray();
 
     private MenuItem configureItem = new MenuItem("Configure");
@@ -58,7 +58,7 @@ public class Interface implements ActionListener {
         }
 
         trayIcon.setToolTip(title);
-        trayIcon.displayMessage(title, "Successfully started application.", TrayIcon.MessageType.NONE);
+        displayMessage("Successfully started application.", TrayIcon.MessageType.NONE);
     }
 
     @Override
@@ -77,4 +77,9 @@ public class Interface implements ActionListener {
             System.exit(0);
         }
     }
+
+    public void displayMessage(String message, TrayIcon.MessageType messageType) {
+        trayIcon.displayMessage(title, message, messageType);
+    }
+
 }
