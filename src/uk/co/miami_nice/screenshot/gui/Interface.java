@@ -16,6 +16,8 @@ public class Interface implements ActionListener {
 
     private final Configure configureInterface = new Configure();
 
+    private final String title = "Screen Capture";
+
     private final PopupMenu popup = new PopupMenu();
     private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/icon.png")));
     private final SystemTray tray = SystemTray.getSystemTray();
@@ -54,6 +56,9 @@ public class Interface implements ActionListener {
         } catch (AWTException e) {
             System.out.println("TrayIcon could not be added.");
         }
+
+        trayIcon.setToolTip(title);
+        trayIcon.displayMessage(title, "Successfully started application.", TrayIcon.MessageType.NONE);
     }
 
     @Override
