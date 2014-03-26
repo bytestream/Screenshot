@@ -7,7 +7,6 @@ import com.intellij.uiDesigner.core.Spacer;
 import uk.co.miami_nice.screenshot.Driver;
 import uk.co.miami_nice.screenshot.misc.Misc;
 import uk.co.miami_nice.screenshot.net.Uploader;
-import uk.co.miami_nice.screenshot.util.JavaClassFinder;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -20,7 +19,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.List;
+import java.util.Set;
 
 public class Configure extends JDialog {
 
@@ -59,8 +58,7 @@ public class Configure extends JDialog {
         }
 
         // Add uploaders
-        JavaClassFinder classFinder = new JavaClassFinder();
-        List<Class<? extends Uploader>> classes = classFinder.findAllMatchingTypes(Uploader.class);
+        Set<Class<? extends Uploader>> classes = Driver.getConfig().getAvailableUploadMethods();
         for (Class c : classes) {
             try {
                 Method m = c.getMethod("getName", null);
