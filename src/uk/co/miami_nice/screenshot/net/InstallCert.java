@@ -8,6 +8,7 @@ import java.security.KeyStore;
 import java.security.MessageDigest;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+import java.util.logging.Logger;
 
 /**
  * Class used to add the server's certificate to the KeyStore
@@ -46,7 +47,7 @@ public class InstallCert {
                 file = new File(dir, "cacerts");
             }
         }
-        System.out.println("Loading KeyStore " + file + "...");
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("Loading KeyStore " + file + "...");
         InputStream in = new FileInputStream(file);
         KeyStore ks = KeyStore.getInstance(KeyStore.getDefaultType());
         ks.load(in, passphrase);
@@ -61,41 +62,36 @@ public class InstallCert {
         context.init(null, new TrustManager[]{tm}, null);
         SSLSocketFactory factory = context.getSocketFactory();
 
-        System.out.println("Opening connection to " + host + ":" + port + "...");
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("Opening connection to " + host + ":" + port + "...");
         SSLSocket socket = (SSLSocket) factory.createSocket(host, port);
         socket.setSoTimeout(10000);
         try {
-            System.out.println("Starting SSL handshake...");
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("Starting SSL handshake...");
             socket.startHandshake();
             socket.close();
-            System.out.println();
-            System.out.println("No errors, certificate is already trusted");
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("No errors, certificate is already trusted");
         } catch (SSLException e) {
-            System.out.println();
-            e.printStackTrace(System.out);
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe(e.getMessage());
         }
 
         X509Certificate[] chain = tm.chain;
         if (chain == null) {
-            System.out.println("Could not obtain server certificate chain");
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("Could not obtain server certificate chain");
             return;
         }
 
-        System.out.println();
-        System.out.println("Server sent " + chain.length + " certificate(s):");
-        System.out.println();
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("Server sent " + chain.length + " certificate(s):");
         MessageDigest sha1 = MessageDigest.getInstance("SHA1");
         MessageDigest md5 = MessageDigest.getInstance("MD5");
         for (int i = 0; i < chain.length; i++) {
             X509Certificate cert = chain[i];
-            System.out.println
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest
                     (" " + (i + 1) + " Subject " + cert.getSubjectDN());
-            System.out.println("   Issuer  " + cert.getIssuerDN());
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("   Issuer  " + cert.getIssuerDN());
             sha1.update(cert.getEncoded());
-            System.out.println("   sha1    " + toHexString(sha1.digest()));
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("   sha1    " + toHexString(sha1.digest()));
             md5.update(cert.getEncoded());
-            System.out.println("   md5     " + toHexString(md5.digest()));
-            System.out.println();
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("   md5     " + toHexString(md5.digest()));
         }
 
         X509Certificate cert = chain[0];
@@ -106,10 +102,8 @@ public class InstallCert {
         ks.store(out, passphrase);
         out.close();
 
-        System.out.println();
-        System.out.println(cert);
-        System.out.println();
-        System.out.println
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest(String.valueOf(cert));
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest
                 ("Added certificate to keystore 'jssecacerts' using alias '"
                         + alias + "'");
     }

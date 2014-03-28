@@ -30,7 +30,8 @@ public class Interface implements ActionListener {
     public Interface() {
         // Check the SystemTray support
         if (!SystemTray.isSupported()) {
-            System.out.println("SystemTray is not supported");
+            // TODO: error reporting
+            System.err.println("SystemTray is not supported");
             return;
         }
 
@@ -54,7 +55,8 @@ public class Interface implements ActionListener {
         try {
             tray.add(trayIcon);
         } catch (AWTException e) {
-            System.out.println("TrayIcon could not be added.");
+            // TODO: error reporting
+            System.err.println("TrayIcon could not be added.");
         }
 
         trayIcon.setToolTip(title);

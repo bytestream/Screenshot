@@ -7,7 +7,10 @@ import uk.co.miami_nice.screenshot.net.Uploader;
 
 import java.awt.*;
 import java.io.*;
-import java.net.*;
+import java.net.URI;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.logging.Logger;
 
 /**
  * @author Kieran Brahney
@@ -86,12 +89,8 @@ public class Personal implements Uploader {
 
             // End of multipart/form-data.
             writer.append("--" + boundary + "--").append(CRLF);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe(e.getMessage());
         } finally {
             if (writer != null) writer.close();
         }
@@ -117,7 +116,7 @@ public class Personal implements Uploader {
                 response += line + "\n";
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe(e.getMessage());
         }
 
         return response;
@@ -133,11 +132,8 @@ public class Personal implements Uploader {
     public void openImage(String location) {
         try {
             Desktop.getDesktop().browse(new URI(location));
-        } catch (IOException e) {
-            // TODO: Error reporting
-            e.printStackTrace();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe(e.getMessage());
         }
     }
 

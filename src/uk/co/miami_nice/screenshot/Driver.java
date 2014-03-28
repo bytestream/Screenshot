@@ -42,7 +42,7 @@ public class Driver {
     public static void main(String[] args) {
         // Load the logger
         Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).addHandler(new TrayHandler());
-        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.ALL);
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
 
         // Load the configuration
         try {

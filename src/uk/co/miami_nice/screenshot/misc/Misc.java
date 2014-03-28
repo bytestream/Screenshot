@@ -8,6 +8,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.logging.Logger;
 
 /**
  * @author Kieran Brahney
@@ -39,7 +40,7 @@ public class Misc {
                 baos.close();
             } catch (IOException e) {
                 // Log unable to close stream but nothing fatal
-                e.printStackTrace();
+                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest(e.getMessage());
             }
         }
 
@@ -52,7 +53,7 @@ public class Misc {
      * @param inBytes Byte array
      * @return A string representing the MD5 hash of the byte array
      */
-    public static String getMD5Hash(byte[] inBytes) {
+    public static String getUniqueHash(byte[] inBytes) {
         MessageDigest digest = null;
         try {
             digest = MessageDigest.getInstance("MD5");

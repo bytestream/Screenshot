@@ -20,6 +20,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Set;
+import java.util.logging.Logger;
 
 public class Configure extends JDialog {
 
@@ -105,15 +106,11 @@ public class Configure extends JDialog {
                 try {
                     //write converted json data to a file named "file.json"
                     FileWriter writer = new FileWriter(Driver.getConfig().getCONFIG_LOCATION());
-                    System.out.println("Written to config: " + Driver.getConfig().getCONFIG_LOCATION());
                     writer.write(json);
                     writer.close();
-                    JOptionPane.showMessageDialog(new JPanel(),
-                            "Success", "Successfully updated configuration.", JOptionPane.INFORMATION_MESSAGE);
+                    Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info("Successfully updated configuration");
                 } catch (IOException ioe) {
-                    JOptionPane.showMessageDialog(new JPanel(),
-                            "Error", ioe.getMessage(), JOptionPane.ERROR_MESSAGE);
-                    ioe.printStackTrace();
+                    Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe(ioe.getMessage());
                 }
             }
         });

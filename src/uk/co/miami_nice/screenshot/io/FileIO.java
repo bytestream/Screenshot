@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 /**
  * @author Kieran Brahney
@@ -25,7 +26,7 @@ public class FileIO {
      * @return A file location including an MD5 hash of the image for the filename
      */
     public static String createFileLocation(BufferedImage image) {
-        String fileName = Misc.getMD5Hash(Misc.imageToByteArray(image, Driver.getConfig().getImageFormat()));
+        String fileName = Misc.getUniqueHash(Misc.imageToByteArray(image, Driver.getConfig().getImageFormat()));
         return Driver.getConfig().getOutputDirectory() + fileName + "." + Driver.getConfig().getImageFormat();
     }
 
@@ -39,7 +40,7 @@ public class FileIO {
         try {
             return new Robot().createScreenCapture(area);
         } catch (AWTException e) {
-            e.printStackTrace();
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).fine(e.getMessage());
             return UIUtil.createImage(0, 0, 0);
         }
     }
@@ -55,7 +56,7 @@ public class FileIO {
             BufferedImage image = ImageIO.read(new File(location));
             return image;
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).fine(e.getMessage());
             return UIUtil.createImage(0, 0, 0);
         }
     }
@@ -73,7 +74,7 @@ public class FileIO {
             ImageIO.write(image, type, new File(location));
             return location;
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).fine(e.getMessage());
             return "";
         }
     }
