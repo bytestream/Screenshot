@@ -3,15 +3,13 @@ package uk.co.miami_nice.screenshot.net;
 import org.reflections.Reflections;
 import uk.co.miami_nice.screenshot.CaptureType;
 import uk.co.miami_nice.screenshot.Driver;
+import uk.co.miami_nice.screenshot.gui.RecordVideo;
 import uk.co.miami_nice.screenshot.io.FileIO;
-import uk.co.miami_nice.screenshot.io.video.JpegImagesToMovie;
-import uk.co.miami_nice.screenshot.misc.Misc;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Set;
-import java.util.Vector;
 
 /**
  * @author Kieran Brahney
@@ -27,25 +25,20 @@ public class UploadManager {
     private static final Set<Class<? extends Uploader>> availableUploadMethods = new Reflections(UploadManager.class.getPackage()).getSubTypesOf(Uploader.class);
 
     /**
+     * Reference to the swing worker thread for recording / stopping video
+     */
+    private static RecordVideo videoWorker;
+
+    /**
      * @param area
      * @param type
      */
     public static void capture(Rectangle area, CaptureType type) {
         switch (type) {
             case VIDEO:
-                Vector inputFiles = new Vector();
-
-                long tStart = System.currentTimeMillis();
-                int i;
-                for (i = 0; i < 300; i++) {
-                    BufferedImage img = FileIO.takeScreenshot(area);
-                    inputFiles.add(Misc.imageToByteArray(img, "jpg"));
-                }
-                long tEnd = System.currentTimeMillis();
-                int frameRate = (int) (Math.round(i / ((tEnd - tStart) / 1000.0)));
-
-                JpegImagesToMovie imageToMovie = new JpegImagesToMovie();
-                imageToMovie.doIt((int) area.getWidth(), (int) area.getHeight(), frameRate, inputFiles, "movie.mov");
+                // Capture the video
+                videoWorker = new RecordVideo(area);
+                videoWorker.execute();
 
                 break;
             default:
@@ -70,6 +63,10 @@ public class UploadManager {
      */
     public static Set<Class<? extends Uploader>> getAvailableUploadMethods() {
         return availableUploadMethods;
+    }
+
+    public static RecordVideo getVideoWorker() {
+        return videoWorker;
     }
 
 }

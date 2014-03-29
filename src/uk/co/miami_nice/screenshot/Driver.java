@@ -26,16 +26,12 @@ public class Driver {
     /**
      * Interface
      */
-    private static Interface anInterface = new Interface();
+    private static Interface anInterface;
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        // Load the logger
-        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).addHandler(new TrayHandler());
-        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
-
         // Load the configuration
         try {
             BufferedReader br = new BufferedReader(new FileReader(config.getCONFIG_LOCATION()));
@@ -43,6 +39,13 @@ public class Driver {
         } catch (FileNotFoundException e) {
             Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).warning("Unable to read configuration file, resorting to default.");
         }
+
+        // Load the interface
+        anInterface = new Interface();
+
+        // Load the logger
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).addHandler(new TrayHandler());
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
     }
 
     /**

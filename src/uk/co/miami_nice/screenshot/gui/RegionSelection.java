@@ -100,8 +100,8 @@ public class RegionSelection extends JFrame {
                                     UploadManager.capture(selectionPane.getBounds(), CaptureType.IMAGE);
                                 }
                             });
+                            dispose();
                     }
-                    dispose();
                 }
             };
             addMouseListener(adapter);
@@ -139,6 +139,17 @@ public class RegionSelection extends JFrame {
             label.setBorder(new EmptyBorder(4, 4, 4, 4));
             label.setForeground(Color.DARK_GRAY);
             add(label, BorderLayout.SOUTH);
+
+            if (type == CaptureType.VIDEO) {
+                JButton stop = new JButton("Stop");
+                stop.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        UploadManager.getVideoWorker().cancel(true);
+                    }
+                });
+                add(stop, BorderLayout.SOUTH);
+            }
 
             addComponentListener(new ComponentAdapter() {
                 @Override
