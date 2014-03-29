@@ -16,6 +16,8 @@ public class Interface implements ActionListener {
 
     private final Configure configureInterface = new Configure();
 
+    private RegionSelection regionSelection;
+
     private final String title = "Screen Capture";
 
     private final PopupMenu popup = new PopupMenu();
@@ -69,10 +71,10 @@ public class Interface implements ActionListener {
             configureInterface.setVisible(true);
 
         } else if (actionEvent.getSource() == imageItem) {
-            new RegionSelection(CaptureType.IMAGE);
+            regionSelection = new RegionSelection(CaptureType.IMAGE);
 
         } else if (actionEvent.getSource() == videoItem) {
-            new RegionSelection(CaptureType.VIDEO);
+            regionSelection = new RegionSelection(CaptureType.VIDEO);
 
         } else if (actionEvent.getSource() == exitItem) {
             tray.remove(trayIcon);
@@ -82,6 +84,10 @@ public class Interface implements ActionListener {
 
     public void displayMessage(String message, TrayIcon.MessageType messageType) {
         trayIcon.displayMessage(title, message, messageType);
+    }
+
+    public RegionSelection getRegionSelection() {
+        return regionSelection;
     }
 
 }

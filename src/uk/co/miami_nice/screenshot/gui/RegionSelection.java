@@ -1,5 +1,8 @@
 package uk.co.miami_nice.screenshot.gui;
 
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
+import com.intellij.uiDesigner.core.Spacer;
 import uk.co.miami_nice.screenshot.CaptureType;
 import uk.co.miami_nice.screenshot.net.UploadManager;
 
@@ -40,6 +43,10 @@ public class RegionSelection extends JFrame {
 
         setBounds(getScreenViewableBounds());
         setVisible(true);
+    }
+
+    public void setVisibility(boolean visibility) {
+        setVisible(visibility);
     }
 
     private class ContentPane extends JPanel {
@@ -126,6 +133,8 @@ public class RegionSelection extends JFrame {
 
     private class SelectionPane extends JPanel {
 
+        private JButton stop;
+
         private JLabel label;
 
         private int prevX = 0, prevY = 0;
@@ -134,22 +143,33 @@ public class RegionSelection extends JFrame {
             setOpaque(false);
             setLayout(new BorderLayout());
 
+            JPanel pnl = new JPanel(new GridLayoutManager(2, 4, new Insets(0, 0, 0, 0), -1, -1));
+            pnl.setOpaque(false);
+
             label = new JLabel("", SwingConstants.RIGHT);
             label.setOpaque(false);
             label.setBorder(new EmptyBorder(4, 4, 4, 4));
             label.setForeground(Color.DARK_GRAY);
-            add(label, BorderLayout.SOUTH);
 
             if (type == CaptureType.VIDEO) {
-                JButton stop = new JButton("Stop");
+                stop = new JButton("Stop");
                 stop.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent actionEvent) {
                         UploadManager.getVideoWorker().cancel(true);
                     }
                 });
-                add(stop, BorderLayout.SOUTH);
+
+                pnl.add(stop, new GridConstraints(1, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+                Spacer spacer1 = new Spacer();
+                pnl.add(spacer1, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
             }
+
+            pnl.add(label, new GridConstraints(1, 3, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+            pnl.add(new Spacer(), new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+            pnl.add(new Spacer(), new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
+
+            add(pnl, BorderLayout.SOUTH);
 
             addComponentListener(new ComponentAdapter() {
                 @Override
