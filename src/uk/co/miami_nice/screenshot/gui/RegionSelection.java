@@ -1,7 +1,7 @@
 package uk.co.miami_nice.screenshot.gui;
 
 import uk.co.miami_nice.screenshot.CaptureType;
-import uk.co.miami_nice.screenshot.Driver;
+import uk.co.miami_nice.screenshot.net.UploadManager;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -90,14 +90,14 @@ public class RegionSelection extends JFrame {
                 public void mouseReleased(MouseEvent e) {
                     switch (type) {
                         case VIDEO:
-                            Driver.capture(selectionPane.getBounds(), CaptureType.VIDEO);
+                            UploadManager.capture(selectionPane.getBounds(), CaptureType.VIDEO);
                             break;
                         default:
                             getRootPane().setVisible(false);
                             EventQueue.invokeLater(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Driver.capture(selectionPane.getBounds(), CaptureType.IMAGE);
+                                    UploadManager.capture(selectionPane.getBounds(), CaptureType.IMAGE);
                                 }
                             });
                     }

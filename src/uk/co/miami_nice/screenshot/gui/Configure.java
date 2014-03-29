@@ -6,6 +6,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import uk.co.miami_nice.screenshot.Driver;
 import uk.co.miami_nice.screenshot.misc.Misc;
+import uk.co.miami_nice.screenshot.net.UploadManager;
 import uk.co.miami_nice.screenshot.net.Uploader;
 
 import javax.imageio.ImageIO;
@@ -59,7 +60,7 @@ public class Configure extends JDialog {
         }
 
         // Add uploaders
-        Set<Class<? extends Uploader>> classes = Driver.getConfig().getAvailableUploadMethods();
+        Set<Class<? extends Uploader>> classes = UploadManager.getAvailableUploadMethods();
         for (Class c : classes) {
             try {
                 Method m = c.getMethod("getName", null);

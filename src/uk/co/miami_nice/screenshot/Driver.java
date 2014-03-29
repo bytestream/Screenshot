@@ -2,19 +2,11 @@ package uk.co.miami_nice.screenshot;
 
 import com.google.gson.Gson;
 import uk.co.miami_nice.screenshot.gui.Interface;
-import uk.co.miami_nice.screenshot.io.FileIO;
-import uk.co.miami_nice.screenshot.io.video.JpegImagesToMovie;
-import uk.co.miami_nice.screenshot.misc.Misc;
-import uk.co.miami_nice.screenshot.net.Uploader;
 import uk.co.miami_nice.screenshot.util.TrayHandler;
 
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -50,41 +42,6 @@ public class Driver {
             config = new Gson().fromJson(br, Config.class);
         } catch (FileNotFoundException e) {
             Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).warning("Unable to read configuration file, resorting to default.");
-        }
-    }
-
-    /**
-     * @param area
-     * @param type
-     */
-    public static void capture(Rectangle area, CaptureType type) {
-        switch (type) {
-            case VIDEO:
-                Vector inputFiles = new Vector();
-
-                long tStart = System.currentTimeMillis();
-                int i;
-                for (i = 0; i < 300; i++) {
-                    BufferedImage img = FileIO.takeScreenshot(area);
-                    inputFiles.add(Misc.imageToByteArray(img, "jpg"));
-                }
-                long tEnd = System.currentTimeMillis();
-                int frameRate = (int) (Math.round(i / ((tEnd - tStart) / 1000.0)));
-
-                JpegImagesToMovie imageToMovie = new JpegImagesToMovie();
-                imageToMovie.doIt((int) area.getWidth(), (int) area.getHeight(), frameRate, inputFiles, "movie.mov");
-
-                break;
-            default:
-                BufferedImage image = FileIO.takeScreenshot(area);
-                String loc = FileIO.writeImage(image, FileIO.createFileLocation(image), getConfig().getImageFormat());
-                try {
-                    Uploader uploader = (Uploader) getConfig().uploadMethodToClass().newInstance();
-                    String response = uploader.post(new File(loc));
-                    uploader.openImage(response);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
         }
     }
 

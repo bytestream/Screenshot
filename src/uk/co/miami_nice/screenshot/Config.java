@@ -1,10 +1,11 @@
 package uk.co.miami_nice.screenshot;
 
-import org.reflections.Reflections;
+import uk.co.miami_nice.screenshot.net.UploadManager;
 import uk.co.miami_nice.screenshot.net.Uploader;
 
 import javax.imageio.ImageIO;
 import java.io.File;
+import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Set;
@@ -15,7 +16,7 @@ import java.util.Set;
  * @package uk.co.miami_nice.screenshot
  * @since 24/03/14 18:25
  */
-public class Config {
+public class Config implements Serializable {
 
     private final String CONFIG_LOCATION = System.getProperty("user.home") + File.separator + ".sc-resources";
 
@@ -24,8 +25,6 @@ public class Config {
     private String imageFormat = "jpg";
 
     private String uploadMethod = "Localhost";
-
-    private final Set<Class<? extends Uploader>> availableUploadMethods = new Reflections(getClass().getPackage()).getSubTypesOf(Uploader.class);
 
     private boolean autoUpload = true;
 
@@ -55,7 +54,7 @@ public class Config {
     }
 
     public Class uploadMethodToClass() {
-        Set<Class<? extends Uploader>> classes = availableUploadMethods;
+        Set<Class<? extends Uploader>> classes = UploadManager.getAvailableUploadMethods();
         for (Class c : classes) {
             try {
                 Method m = c.getMethod("getName", null);
@@ -74,7 +73,7 @@ public class Config {
     }
 
     public void setUploadMethod(String uploadMethod) {
-        Set<Class<? extends Uploader>> classes = availableUploadMethods;
+        Set<Class<? extends Uploader>> classes = UploadManager.getAvailableUploadMethods();
         for (Class c : classes) {
             try {
                 Method m = c.getMethod("getName", null);
@@ -108,7 +107,4 @@ public class Config {
         this.outputDirectory = outputDirectory + File.separator;
     }
 
-    public Set<Class<? extends Uploader>> getAvailableUploadMethods() {
-        return availableUploadMethods;
-    }
 }
