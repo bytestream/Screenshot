@@ -15,8 +15,6 @@ public class HotKeyManager implements HotkeyListener {
 
     public enum OS {Unknown, Windows, Mac, Linux}
 
-    ;
-
     /**
      * Setup hot keys depending on OS
      */
