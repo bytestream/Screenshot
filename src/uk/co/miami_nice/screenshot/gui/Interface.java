@@ -21,7 +21,7 @@ public class Interface implements ActionListener {
     private final String title = "Screen Capture";
 
     private final PopupMenu popup = new PopupMenu();
-    private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage(Interface.class.getResource("/img/icon.png")));
+    private final TrayIcon trayIcon = new TrayIcon(Toolkit.getDefaultToolkit().getImage(Interface.class.getResource("/resources/icon.png")));
     private final SystemTray tray = SystemTray.getSystemTray();
 
     private MenuItem configureItem = new MenuItem("Configure");

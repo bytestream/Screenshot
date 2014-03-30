@@ -57,8 +57,8 @@ public class RecordVideo extends SwingWorker<Void, Void> {
 //            EventQueue.invokeLater(new Runnable() {
 //                @Override
 //                public void run() {
-//                    BufferedImage img = FileIO.takeScreenshot(area);
-//                    inputImages.add(Misc.imageToByteArray(img, "jpg"));
+//                    BufferedImage resources = FileIO.takeScreenshot(area);
+//                    inputImages.add(Misc.imageToByteArray(resources, "jpg"));
 //                }
 //            });
 //            Driver.getAnInterface().getRegionSelection().setVisibility(true);

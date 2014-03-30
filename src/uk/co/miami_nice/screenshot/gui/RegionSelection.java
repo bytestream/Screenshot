@@ -23,7 +23,7 @@ public class RegionSelection extends JFrame {
         add(new ContentPane(type));
 
         // Set icon
-        setIconImage(new ImageIcon("img/icon.png").getImage());
+        setIconImage(new ImageIcon("resources/icon.png").getImage());
 
         // Set cursor
         getRootPane().setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
@@ -152,7 +152,7 @@ public class RegionSelection extends JFrame {
             label.setForeground(Color.DARK_GRAY);
 
             if (type == CaptureType.VIDEO) {
-                ImageIcon image = new ImageIcon(getClass().getResource("/img/stop78x78.png"));
+                ImageIcon image = new ImageIcon(getClass().getResource("/resources/stop56x56.png"));
                 stop = new JLabel(image);
                 stop.setOpaque(false);
                 stop.setPreferredSize(new Dimension(56, 56));
