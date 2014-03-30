@@ -45,7 +45,7 @@ public class Driver {
 
         // Load the logger
         Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).addHandler(new TrayHandler());
-        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
+        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.WARNING);
     }
 
     /**

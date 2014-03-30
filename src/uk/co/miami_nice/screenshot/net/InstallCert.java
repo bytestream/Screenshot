@@ -71,7 +71,7 @@ public class InstallCert {
             socket.close();
             Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest("No errors, certificate is already trusted");
         } catch (SSLException e) {
-            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).severe(e.getMessage());
+            Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).finest(e.getMessage());
         }
 
         X509Certificate[] chain = tm.chain;
