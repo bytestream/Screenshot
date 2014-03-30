@@ -100,11 +100,11 @@ public class Config implements Serializable {
     }
 
     public String getOutputDirectory() {
-        return outputDirectory + File.separator;
+        return outputDirectory;
     }
 
     public void setOutputDirectory(String outputDirectory) {
-        this.outputDirectory = outputDirectory + File.separator;
+        this.outputDirectory = (outputDirectory + File.separator).replaceAll("/+", "/").replaceAll("\\\\+", "\\\\");
     }
 
 }

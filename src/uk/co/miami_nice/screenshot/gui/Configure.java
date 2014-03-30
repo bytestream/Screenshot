@@ -118,6 +118,7 @@ public class Configure extends JDialog {
                 Driver.getConfig().setUploadMethod((String) uploadDropdown.getSelectedItem());
                 Driver.getConfig().setAutoUpload(yesRadioButton.isSelected());
                 Driver.getConfig().setOutputDirectory(outputDirectory.getText());
+                outputDirectory.setText(Driver.getConfig().getOutputDirectory());
 
                 // Save config
                 String json = new Gson().toJson(Driver.getConfig());
