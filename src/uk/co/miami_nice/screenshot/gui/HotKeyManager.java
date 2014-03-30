@@ -17,6 +17,9 @@ public class HotKeyManager implements HotkeyListener {
 
     ;
 
+    /**
+     * Setup hot keys depending on OS
+     */
     public HotKeyManager() {
         switch (getOperatingSystem()) {
             case Windows:
