@@ -133,7 +133,7 @@ public class RegionSelection extends JFrame {
 
     private class SelectionPane extends JPanel {
 
-        private JButton stop;
+        private JLabel stop;
 
         private JLabel label;
 
@@ -152,10 +152,13 @@ public class RegionSelection extends JFrame {
             label.setForeground(Color.DARK_GRAY);
 
             if (type == CaptureType.VIDEO) {
-                stop = new JButton("Stop");
-                stop.addActionListener(new ActionListener() {
+                ImageIcon image = new ImageIcon(getClass().getResource("/img/stop78x78.png"));
+                stop = new JLabel(image);
+                stop.setOpaque(false);
+                stop.setPreferredSize(new Dimension(56, 56));
+                stop.addMouseListener(new MouseAdapter() {
                     @Override
-                    public void actionPerformed(ActionEvent actionEvent) {
+                    public void mouseClicked(MouseEvent mouseEvent) {
                         UploadManager.getVideoWorker().cancel(true);
                     }
                 });
