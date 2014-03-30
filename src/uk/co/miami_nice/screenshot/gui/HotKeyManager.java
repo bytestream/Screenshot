@@ -1,9 +1,6 @@
 package uk.co.miami_nice.screenshot.gui;
 
-import com.melloware.jintellitype.HotkeyListener;
-import com.melloware.jintellitype.JIntellitype;
-import uk.co.miami_nice.screenshot.CaptureType;
-import uk.co.miami_nice.screenshot.Driver;
+import uk.co.miami_nice.screenshot.gui.hotkeys.Windows;
 
 /**
  * @author Kieran Brahney
@@ -11,7 +8,7 @@ import uk.co.miami_nice.screenshot.Driver;
  * @package uk.co.miami_nice.screenshot.gui
  * @since 30/03/14 16:41
  */
-public class HotKeyManager implements HotkeyListener {
+public class HotKeyManager {
 
     public enum OS {Unknown, Windows, Mac, Linux}
 
@@ -21,34 +18,9 @@ public class HotKeyManager implements HotkeyListener {
     public HotKeyManager() {
         switch (getOperatingSystem()) {
             case Windows:
-                initWindows();
+                new Windows();
                 break;
         }
-    }
-
-    /**
-     * Initialise JIntellitype and set the hot keys for screen capture
-     */
-    private void initWindows() {
-        JIntellitype.getInstance();
-
-        // Assign global hotkeys to CTRL+SHIFT+S
-        JIntellitype.getInstance().registerHotKey(1, JIntellitype.MOD_CONTROL + JIntellitype.MOD_SHIFT, (int) 'S');
-
-        //assign this class to be a HotKeyListener
-        JIntellitype.getInstance().addHotKeyListener(this);
-    }
-
-    /**
-     * Event fired when a WM_HOTKEY message is received that was initiated
-     * by this application.
-     * <p/>
-     *
-     * @param identifier the unique Identifer the Hotkey was assigned
-     */
-    @Override
-    public void onHotKey(int identifier) {
-        Driver.getAnInterface().setRegionSelection(new RegionSelection(CaptureType.IMAGE));
     }
 
     /**

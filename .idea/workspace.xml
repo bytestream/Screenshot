@@ -7,13 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6149788c-9d00-42f7-9b11-b527e5d587f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/hotkeys/Windows.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java" afterPath="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Screenshot.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Driver.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396192170601" ignored="false" />
-    <file path="/Dummy.txt" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197395272" ignored="false" />
+    <file path="/Dummy.txt" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197413360" ignored="false" />
     <file path="/Uploader.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395769920339" ignored="false" />
     <file path="/FileIO.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396096423605" ignored="false" />
     <file path="/ImageType.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395580287740" ignored="false" />
@@ -53,7 +54,8 @@
     <file path="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/TEst.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396115370913" ignored="false" />
     <file path="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/TEst.form" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396115370913" ignored="false" />
     <file path="/Test.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396184889027" ignored="false" />
-    <file path="/HotKeyManager.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197389958" ignored="false" />
+    <file path="/HotKeyManager.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197699603" ignored="false" />
+    <file path="/Windows.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197687040" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,10 +166,8 @@
       <file leaf-file-name="HotKeyManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="58" selection-start="608" selection-end="608" vertical-scroll-proportion="0.4493392">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="20" column="26" selection-start="474" selection-end="474" vertical-scroll-proportion="0.38990825">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -196,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/io/FileIO.java" />
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/BoxLayoutVertical.java" />
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/BoxLayout.java" />
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/test.form" />
@@ -211,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Config.java" />
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Configure.java" />
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Interface.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/hotkeys/Windows.java" />
         <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java" />
       </list>
     </option>
@@ -305,125 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploaders" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="misc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenshot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="video" />
+              <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -446,6 +328,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hotkeys" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -937,7 +823,11 @@
       <created>1396197397268</created>
       <updated>1396197397268</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Fixing formatting">
+      <created>1396197415472</created>
+      <updated>1396197415472</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -985,7 +875,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15368196" sideWeight="0.7873051" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21269488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21269488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.7861915" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1085,13 +975,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/io/FileIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="54" selection-start="861" selection-end="900" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/jre/lib/rt.jar!/javax/swing/BoxLayout.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.12481645" />
@@ -1181,12 +1064,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java">
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/CaptureType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="58" selection-start="608" selection-end="608" vertical-scroll-proportion="0.4493392">
+        <state line="10" column="20" selection-start="190" selection-end="190" vertical-scroll-proportion="0.19495413">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/hotkeys/Windows.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="469" selection-end="469" vertical-scroll-proportion="0.27293578">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="474" selection-end="474" vertical-scroll-proportion="0.38990825">
+          <folding />
         </state>
       </provider>
     </entry>
