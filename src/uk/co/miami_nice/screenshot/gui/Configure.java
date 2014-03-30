@@ -11,6 +11,8 @@ import uk.co.miami_nice.screenshot.net.Uploader;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +42,7 @@ public class Configure extends JDialog {
     private JRadioButton noRadioButton;
     private JLabel outputLabel;
     private JTextField outputDirectory;
+    private JTextPane aboutDesc;
 
     public Configure() {
         $$$setupUI$$$();
@@ -49,6 +52,21 @@ public class Configure extends JDialog {
 
         setContentPane(contentPane);
         setModal(true);
+
+        // About Description hyperlinks
+        aboutDesc.addHyperlinkListener(new HyperlinkListener() {
+            @Override
+            public void hyperlinkUpdate(HyperlinkEvent hyperlinkEvent) {
+                // Only fire on click
+                if (HyperlinkEvent.EventType.ACTIVATED.equals(hyperlinkEvent.getEventType())) {
+                    try {
+                        Desktop.getDesktop().browse(hyperlinkEvent.getURL().toURI());
+                    } catch (Exception e) {
+                        Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).warning(e.getMessage());
+                    }
+                }
+            }
+        });
 
         // Add image formats
         String[] unique = Misc.unique(ImageIO.getWriterFormatNames());
@@ -189,13 +207,19 @@ public class Configure extends JDialog {
         aboutLabel.setFont(new Font(aboutLabel.getFont().getName(), Font.BOLD, 18));
         aboutLabel.setText("About");
         panel3.add(aboutLabel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        final JLabel label1 = new JLabel();
-        label1.setText("<html>This a multi-platform open-source screen capture application.<br />The application can be used to capture video or static images<br /> and upload these to a hosting site of your choice.<br /><br /><b>Contact:</b><br /><a href=\"mailto:kieran@miami-nice.co.uk\">kieran@miami-nice.co.uk</a><br /><a href=\"http://github.com/bytestream/Screenshot\">Source Code</a></html>");
-        panel3.add(label1, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_NORTHWEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer2 = new Spacer();
         panel3.add(spacer2, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         final Spacer spacer3 = new Spacer();
         panel3.add(spacer3, new GridConstraints(1, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        aboutDesc = new JTextPane();
+        aboutDesc.setContentType("text/html");
+        aboutDesc.setEditable(false);
+        aboutDesc.setEnabled(true);
+        aboutDesc.setOpaque(false);
+        aboutDesc.setRequestFocusEnabled(false);
+        aboutDesc.setText("<html>\n  <head>\n    \n  </head>\n  <body>\n    This a multi-platform open-source screen capture application.<br>The \n    application can be used to capture video or static images<br>and upload \n    these to a hosting site of your choice.<br><br><b>Contact:</b><br><a href=\"mailto:kieran@miami-nice.co.uk\">kieran@miami-nice.co.uk</a><br><a href=\"http://github.com/bytestream/Screenshot\">Source \n    Code</a>\n  </body>\n</html>\n");
+        aboutDesc.putClientProperty("JEditorPane.honorDisplayProperties", Boolean.FALSE);
+        panel3.add(aboutDesc, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(150, 50), null, 0, false));
         ButtonGroup buttonGroup;
         buttonGroup = new ButtonGroup();
         buttonGroup.add(noRadioButton);

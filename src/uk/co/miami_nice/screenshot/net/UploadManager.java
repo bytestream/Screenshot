@@ -47,7 +47,10 @@ public class UploadManager {
                 try {
                     Uploader uploader = (Uploader) Driver.getConfig().uploadMethodToClass().newInstance();
                     String response = uploader.post(new File(loc));
-                    uploader.openImage(response);
+
+                    // Is auto upload enabled?
+                    if (Driver.getConfig().isAutoUpload())
+                        uploader.openImage(response);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
