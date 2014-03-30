@@ -37,6 +37,9 @@ public class Interface implements ActionListener {
             return;
         }
 
+        // Add tooltip (over text)
+        trayIcon.setToolTip(title);
+
         // Auto resize the tray icon
         trayIcon.setImageAutoSize(true);
 
@@ -61,7 +64,9 @@ public class Interface implements ActionListener {
             System.err.println("TrayIcon could not be added.");
         }
 
-        trayIcon.setToolTip(title);
+        // Register hotkeys
+        new HotKeyManager();
+
         displayMessage("Successfully started application.", TrayIcon.MessageType.NONE);
     }
 
@@ -71,10 +76,10 @@ public class Interface implements ActionListener {
             configureInterface.setVisible(true);
 
         } else if (actionEvent.getSource() == imageItem) {
-            regionSelection = new RegionSelection(CaptureType.IMAGE);
+            setRegionSelection(new RegionSelection(CaptureType.IMAGE));
 
         } else if (actionEvent.getSource() == videoItem) {
-            regionSelection = new RegionSelection(CaptureType.VIDEO);
+            setRegionSelection(new RegionSelection(CaptureType.VIDEO));
 
         } else if (actionEvent.getSource() == exitItem) {
             tray.remove(trayIcon);
@@ -88,6 +93,10 @@ public class Interface implements ActionListener {
 
     public RegionSelection getRegionSelection() {
         return regionSelection;
+    }
+
+    public void setRegionSelection(RegionSelection regionSelection) {
+        this.regionSelection = regionSelection;
     }
 
 }

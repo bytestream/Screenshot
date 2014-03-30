@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Screenshot:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6149788c-9d00-42f7-9b11-b527e5d587f7" name="Default" comment="Fixing logging and output directory slashes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jintellitype-1.3.9.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Screenshot.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Screenshot_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/javax_media_jmf_2_1_1e.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jintellitype_1_3_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/org_reflections_reflections_0_9_9_RC1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Interface.java" afterPath="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Interface.java" />
+    </list>
+    <ignored path="Screenshot.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Driver.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396192170601" ignored="false" />
+    <file path="/Dummy.txt" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197143685" ignored="false" />
+    <file path="/Uploader.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395769920339" ignored="false" />
+    <file path="/FileIO.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396096423605" ignored="false" />
+    <file path="/ImageType.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395580287740" ignored="false" />
+    <file path="/Misc.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396037516298" ignored="false" />
+    <file path="/Local.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395617776540" ignored="false" />
+    <file path="/RegionSelection.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396190833697" ignored="false" />
+    <file path="$PROJECT_DIR$/../Update-Library/.idea/workspace.xml" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395753555024" ignored="false" />
+    <file path="/fragment.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396052333085" ignored="false" />
+    <file path="/Miami_Nice.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395617830055" ignored="false" />
+    <file path="/upload.php" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395616618185" ignored="false" />
+    <file path="$PROJECT_DIR$/../Chess - Hitasha/src/Driver.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395664200668" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/ChessSquare.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395663800962" ignored="false" />
+    <file path="$PROJECT_DIR$/../Chess - Hitasha/src/ChessSquare.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395695405976" ignored="false" />
+    <file path="$PROJECT_DIR$/../Chess - Hitasha/src/ChessBoard.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395669058261" ignored="false" />
+    <file path="/ChessBoard.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395669058261" ignored="false" />
+    <file path="/ChessSquare.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395669380559" ignored="false" />
+    <file path="/InstallCert.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396185384402" ignored="false" />
+    <file path="/Config.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396192722022" ignored="false" />
+    <file path="/Personal.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396119508613" ignored="false" />
+    <file path="/Demo.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395688012269" ignored="false" />
+    <file path="/Interface.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396194604934" ignored="false" />
+    <file path="/Configure.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396192358745" ignored="false" />
+    <file path="/CatpureType.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395756457336" ignored="false" />
+    <file path="/JpegImagesToMovie.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395762012781" ignored="false" />
+    <file path="/ImageDataSource.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396036519150" ignored="false" />
+    <file path="/ImageSourceStream.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396036351721" ignored="false" />
+    <file path="/Frames.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395766917789" ignored="false" />
+    <file path="/JavaClassFinder.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395796639805" ignored="false" />
+    <file path="/Localhost.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395779991006" ignored="false" />
+    <file path="/FileWalker.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395796302070" ignored="false" />
+    <file path="/GUIHandler.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395871316187" ignored="false" />
+    <file path="/GUIFormatter.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1395871297887" ignored="false" />
+    <file path="/PngImageSourceStream.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396037525890" ignored="false" />
+    <file path="/UploadManager.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396185570476" ignored="false" />
+    <file path="/RecordVideo.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396116528515" ignored="false" />
+    <file path="/BoxLayoutVertical.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396114522981" ignored="false" />
+    <file path="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/TEst.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396115370913" ignored="false" />
+    <file path="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/TEst.form" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396115370913" ignored="false" />
+    <file path="/Test.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396184889027" ignored="false" />
+    <file path="/HotKeyManager.java" changelist="6149788c-9d00-42f7-9b11-b527e5d587f7" time="1396197074699" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Screenshot" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Driver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Driver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="71" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegionSelection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/RegionSelection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="92" selection-start="5173" selection-end="5173" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="61" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configure.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Configure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="120" column="79" selection-start="4661" selection-end="4661" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#$$$setupUI$$$#0;class#Configure#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interface.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Interface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="105" selection-start="1711" selection-end="1711" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HotKeyManager.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="10" selection-start="619" selection-end="619" vertical-scroll-proportion="0.54919237">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Kieran &lt;kieran@miami-nice.c..." />
+        <option value="Kieran &lt;kieran@miami-nice.co.uk&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/io/FileIO.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/BoxLayoutVertical.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/BoxLayout.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/test.form" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/RecordVideo.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/net/uploaders/Personal.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Test.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/net/InstallCert.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/net/UploadManager.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Configure.form" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/RegionSelection.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Driver.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Config.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Configure.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Interface.java" />
+        <option value="$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="2" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploaders" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="misc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="video" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screenshot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jintellitype-1.3.9.jar!/" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="screenshot" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="A:\Users\Kieran\Code\Screenshot\lib" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\Users\Kieran\Code\Screenshot\src\uk\co\miami_nice\screenshot" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="uk.co.miami_nice.screenshot.net.UploadManager" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="uk.co.miami_nice.screenshot.gui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="A:\Users\Kieran\Code\Screenshot\src" />
+      <recent name="A:\Users\Kieran\Code\Screenshot" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Driver">
+    <configuration default="false" name="Driver" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.co.miami_nice.screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.co.miami_nice.screenshot.Driver" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Screenshot" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Demo" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.co.miami_nice.screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.co.miami_nice.screenshot.Demo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Screenshot" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProgressBarDemo" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.co.miami_nice.screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.co.miami_nice.screenshot.ProgressBarDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Screenshot" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BoxLayoutVertical" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.co.miami_nice.screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.co.miami_nice.screenshot.BoxLayoutVertical" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Screenshot" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="uk.co.miami_nice.screenshot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="uk.co.miami_nice.screenshot.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Screenshot" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Driver" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Demo" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ProgressBarDemo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.BoxLayoutVertical" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Test" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.Driver" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="2" class="java.lang.String" itemvalue="Application.BoxLayoutVertical" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ProgressBarDemo" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Demo" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6149788c-9d00-42f7-9b11-b527e5d587f7" name="Default" comment="" />
+      <created>1395579282903</created>
+      <updated>1395579282903</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Base of screenshot program with working full screen ability">
+      <created>1395583264988</created>
+      <updated>1395583264988</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adding driver">
+      <created>1395583464274</created>
+      <updated>1395583464274</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Base of region selection">
+      <created>1395590338890</created>
+      <updated>1395590338890</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adding escape key to exit">
+      <created>1395591993967</created>
+      <updated>1395591993967</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixing issue with X/Y coord outputs">
+      <created>1395592470983</created>
+      <updated>1395592470983</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding crosshair cursor">
+      <created>1395592740108</created>
+      <updated>1395592740108</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Now opens file automatically after screenshot is taken">
+      <created>1395597309906</created>
+      <updated>1395597309906</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Removing unneeded class">
+      <created>1395597661887</created>
+      <updated>1395597661887</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding PHP uploader">
+      <created>1395599021294</created>
+      <updated>1395599021294</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adding a personal uploader">
+      <created>1395605836249</created>
+      <updated>1395605836249</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixing returned URL in PHP script">
+      <created>1395616665287</created>
+      <updated>1395616665287</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Working uploader to my personal web space">
+      <created>1395617375417</created>
+      <updated>1395617375417</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Renaming Uploader">
+      <created>1395617464173</created>
+      <updated>1395617464173</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adding javadoc">
+      <created>1395618085487</created>
+      <updated>1395618085487</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adding icon to GUI&#10;Committing gson library">
+      <created>1395619148340</created>
+      <updated>1395619148340</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Moving PHP upload script out of JAR src">
+      <created>1395619203918</created>
+      <updated>1395619203918</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixing typo in php script">
+      <created>1395663703353</created>
+      <updated>1395663703353</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Automatically download the certificate for the Personal uploader (self-signed)">
+      <created>1395686768062</created>
+      <updated>1395686768062</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adding a system tray icon">
+      <created>1395689986229</created>
+      <updated>1395689986229</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adding JMF as a base for screen capturing video">
+      <created>1395695717300</created>
+      <updated>1395695717300</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixing bug - dispose regional capture after complete">
+      <created>1395698301650</created>
+      <updated>1395698301650</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Adding basics of video capture">
+      <created>1395758325647</created>
+      <updated>1395758325647</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Modifying video capture so it doesn't create million of image frame files">
+      <created>1395763554079</created>
+      <updated>1395763554079</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Adding user configuration">
+      <created>1395778444070</created>
+      <updated>1395778444070</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Forgot to commit a couple of files with the last commit">
+      <created>1395778543321</created>
+      <updated>1395778543321</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixing bugs and moving classes into more appropriate packages">
+      <created>1395780178066</created>
+      <updated>1395780178066</updated>
+    </task>
+    <task id="LOCAL-00027" summary="User configuration is now persistent">
+      <created>1395782710305</created>
+      <updated>1395782710305</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Ensuring only one instance of the configuration dialog can display at one time">
+      <created>1395782985423</created>
+      <updated>1395782985423</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fixing trayicon not displaying when deployed in a jar">
+      <created>1395793245505</created>
+      <updated>1395793245505</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Replacing reflection with reflections library (previous reflection didn't work when deployed as JAR)">
+      <created>1395868105078</created>
+      <updated>1395868105078</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Enhancing tray icon">
+      <created>1395868490157</created>
+      <updated>1395868490157</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Adding base of error logging">
+      <created>1395871502969</created>
+      <updated>1395871502969</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Adding log messages">
+      <created>1396032617428</created>
+      <updated>1396032617428</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Fixing issue with config not saving">
+      <created>1396054636829</created>
+      <updated>1396054636829</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Fixing issue with not reading config&#10;Improving video recording">
+      <created>1396060812078</created>
+      <updated>1396060812078</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Improving video capture">
+      <created>1396116632747</created>
+      <updated>1396116632747</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Changing log level">
+      <created>1396185456487</created>
+      <updated>1396185456487</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Adding check to see whether auto upload is enabled&#10;Fixing clickable hyperlinks in about text">
+      <created>1396187038196</created>
+      <updated>1396187038196</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Prettifying the video control buttons">
+      <created>1396191050023</created>
+      <updated>1396191050023</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Prettifying the video control buttons">
+      <created>1396191085506</created>
+      <updated>1396191085506</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Renaming">
+      <created>1396191927921</created>
+      <updated>1396191927921</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Fixing logging and output directory slashes">
+      <created>1396192800491</created>
+      <updated>1396192800491</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15741728" sideWeight="0.7873051" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15741728" sideWeight="0.7873051" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32405347" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15368196" sideWeight="0.7873051" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21269488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.7861915" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing logging and output directory slashes" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Fixing typo in php script" />
+    <MESSAGE value="Automatically download the certificate for the Personal uploader (self-signed)" />
+    <MESSAGE value="Adding a system tray icon" />
+    <MESSAGE value="Adding JMF as a base for screen capturing video" />
+    <MESSAGE value="Fixing bug - dispose regional capture after complete" />
+    <MESSAGE value="Adding basics of video capture" />
+    <MESSAGE value="Modifying video capture so it doesn't create million of image frame files" />
+    <MESSAGE value="Adding user configuration" />
+    <MESSAGE value="Forgot to commit a couple of files with the last commit" />
+    <MESSAGE value="Fixing bugs and moving classes into more appropriate packages" />
+    <MESSAGE value="User configuration is now persistent" />
+    <MESSAGE value="Ensuring only one instance of the configuration dialog can display at one time" />
+    <MESSAGE value="Fixing trayicon not displaying when deployed in a jar" />
+    <MESSAGE value="Replacing reflection with reflections library (previous reflection didn't work when deployed as JAR)" />
+    <MESSAGE value="Enhancing tray icon" />
+    <MESSAGE value="Adding base of error logging" />
+    <MESSAGE value="Adding log messages" />
+    <MESSAGE value="Fixing issue with config not saving" />
+    <MESSAGE value="Fixing issue with not reading config&#10;Improving video recording" />
+    <MESSAGE value="Improving video capture" />
+    <MESSAGE value="Changing log level" />
+    <MESSAGE value="Adding check to see whether auto upload is enabled&#10;Fixing clickable hyperlinks in about text" />
+    <MESSAGE value="Prettifying the video control buttons" />
+    <MESSAGE value="Renaming" />
+    <MESSAGE value="Fixing logging and output directory slashes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/io/FileIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="54" selection-start="861" selection-end="900" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/jre/lib/rt.jar!/javax/swing/BoxLayout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.12481645" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/io/video/JpegImagesToMovie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="280" column="27" selection-start="9064" selection-end="9069" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/jre/lib/rt.jar!/java/awt/Desktop.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="66" selection-start="338" selection-end="338" vertical-scroll-proportion="0.27459618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Configure.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/net/InstallCert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="68" selection-start="2556" selection-end="2556" vertical-scroll-proportion="-0.04992658">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/RecordVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="109" selection-start="2503" selection-end="2503" vertical-scroll-proportion="0.67547727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/net/uploaders/Personal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="13" selection-start="4471" selection-end="4471" vertical-scroll-proportion="0.9500734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/net/UploadManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="7" selection-start="948" selection-end="948" vertical-scroll-proportion="0.40675476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="61" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Configure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="79" selection-start="4661" selection-end="4661" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#$$$setupUI$$$#0;class#Configure#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="71" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/RegionSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="92" selection-start="5173" selection-end="5173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/Interface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="105" selection-start="1711" selection-end="1711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uk/co/miami_nice/screenshot/gui/HotKeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="10" selection-start="619" selection-end="619" vertical-scroll-proportion="0.54919237">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="artifact" />
+              <type id="jpa-descriptors" />
+              <type id="library" />
+              <type id="javaee-facet-resources" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>Screenshot:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Screenshot</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jintellitype-1.3.9</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
